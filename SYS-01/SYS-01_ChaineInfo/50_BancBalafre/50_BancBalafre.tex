@@ -5,7 +5,7 @@
 %\newcommand{\UPSTIidClasse}{12}
 % ATS 2019
 \exer{Le banc balafre $\star$ \label{SYS:01:50}}
-\setcounter{question}{0}\xpComp{SYS}{01}
+\setcounter{question}{0}\marginnote{\xpComp{SYS}{01}}
 \index{Compétence SYS-01}
 \index{Le Banc Balafre}
 \index{Caractériser un constituant de la chaîne d’information.}
@@ -19,21 +19,14 @@
 \else
 
 
-Entre autres contrôles de la chaîne d’acquisition, le superviseur vérifie que la mesure des
-efforts se fait correctement : au niveau des actionneurs piézoélectriques et au niveau du
-joint testé. Les capteurs de force utilisés sur le système sont analogiques. Afin de simplifier
-le traitement et l’interprétation de ces forces, on utilise un amplificateur de charges à
-plusieurs canaux (voir figure \ref{fig_50_01}).
+Entre autres contrôles de la chaîne d’acquisition, le superviseur vérifie que la mesure des efforts se fait correctement : au niveau des actionneurs piézoélectriques et au niveau du joint testé. Les capteurs de force utilisés sur le système sont analogiques. Afin de simplifier le traitement et l’interprétation de ces forces, on utilise un amplificateur de charges à plusieurs canaux (voir figure \ref{fig_50_01}).
 
 
-
-
-
-\begin{figure}[H]
+\begin{marginfigure}
 \centering
 \includegraphics[width=\linewidth]{fig_50_01}
 \caption{Amplificateur de charge à plusieurs canaux KISTLER. \label{fig_50_01}}
-\end{figure}
+\end{marginfigure}
 
 
 
@@ -52,6 +45,12 @@ La conversion analogique/numérique se fait ici sur 12 bits. La mesure de l’ef
 sur la plage de $-20$ à \SI{20}{kN}. Les données techniques utiles sont rassemblées sur la figure
 \ref{fig_50_02}.
 
+\begin{marginfigure}
+\centering
+\includegraphics[width=.7\linewidth]{fig_50_03}
+\caption{Capteur de force KISTLER 9167A. \label{fig_50_03}}
+\end{marginfigure}
+
 Le capteur de force (voir figure \ref{fig_50_03}) utilisé est un capteur KISTLER 9167A, permettant
 de mesurer des efforts dans trois directions. Pour la mesure de l’effort développé par
 les actionneurs, seule la direction Z est utilisée, et la sensibilité du capteur dans cette
@@ -65,11 +64,6 @@ Le synoptique de la figure \ref{fig_50_04} présente la structure interne de l�
 \end{figure}
 
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=.7\linewidth]{fig_50_03}
-\caption{Capteur de force KISTLER 9167A. \label{fig_50_03}}
-\end{figure}
 
 \begin{figure}[H]
 \centering
@@ -78,8 +72,7 @@ Le synoptique de la figure \ref{fig_50_04} présente la structure interne de l�
 \end{figure}
 \fi
 
-\question{Sur le synoptique de la figure \ref{fig_50_04}, on peut lire « Analog to Digital
-Converter Multiplexed ». Que signifie le terme multiplexé utilisé ici ?}
+\question{Sur le synoptique de la figure \ref{fig_50_04}, on peut lire « Analog to Digital Converter Multiplexed ». Que signifie le terme multiplexé utilisé ici ?}
 \ifprof
 \else
 \fi
