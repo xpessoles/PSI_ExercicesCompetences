@@ -1,0 +1,66 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctiontrue
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{12}
+
+\exer{Parallélépipède$\star$ \label{B2:10:40}}
+\setcounter{question}{0}\UPSTIcompetence[2]{B2-10}
+\index{Compétence B2-10}
+\index{Parallélépipède}
+\ifcorrection
+\else
+\marginnote{\textbf{Pas de corrigé pour cet exercice.}}
+\fi
+
+\ifprof
+\else
+La matrice d'inertie d'un cylindre d'axe $\axe{G}{k}$ de rayon $R$ et de hauteur $H$ et de masse $m$ est donnée en son centre d'inertie par 
+$\inertie{G}{1}=\matinertie{A}{A}{C}{0}{0}{0}{\base{i}{j}{k}}$ avec $A=m\left(\dfrac{R^2}{4}+\dfrac{H^2}{12} \right)$ et $C=m\dfrac{R^2}{2}$. 
+
+
+La matrice d'inertie d'un parallélépipède de cotés $a$, $b$ et $c$ et de masse $m$ est donnée en son centre d'inertie par 
+$\inertie{G}{1}=\matinertie{A}{B}{C}{0}{0}{0}{\base{i}{j}{k}}$ avec $A={m\dfrac{b^2+c^2}{12}}$, $B={m\dfrac{a^2+c^2}{12}}$, $C={m\dfrac{a^2+b^2}{12}}$.
+
+Soit la pièce suivante. 
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{40_01}
+\end{marginfigure}
+
+On pose $\vect{OA}=\dfrac{a}{2}\vect{x}+\dfrac{c}{2}\vect{z}$. 
+\fi
+
+
+
+\question{Déterminer la position du centre d'inertie $G$ du solide.}
+\ifprof
+Pour des raisons de symétrie, on a directement $\vect{OG}=\dfrac{a}{2}\vect{x}+\dfrac{b}{2}\vect{y}+\dfrac{c}{2}\vect{z}$.
+\else
+\fi
+
+\question{Déterminer la matrice d'inertie du solide en $G$, en $A$ puis $O$.}
+\ifprof ~\\
+Notons (1) le parallélépipède rectangle et (2) le cylindre (plein). On note $\mathcal{B}_0=\base{x}{y}{z}$
+On a $\inertie{G}{1}=\matinertie{A_1}{B_1}{C_1}{0}{0}{0}{\mathcal{B}_0}$ et
+$\inertie{G}{2}=\matinertie{A_2}{B_2}{A_2}{0}{0}{0}{\mathcal{B}_0}$ (attention l'axe du cylindre est $\vect{y}$).
+
+On a donc $\inertie{G}{S}=\matinertie{A_1-A_2}{B_1-B_2}{C_1-A_2}{0}{0}{0}{\mathcal{B}_0}$.
+
+Par ailleurs, $m=m_1-m_2$
+et $\vect{AG}=\dfrac{b}{2}\vect{y}$; donc $\inertie{A}{S}=\matinertie{A_1-A_2+m\dfrac{b^2}{4}}{B_1-B_2}{C_1-A_2+m\dfrac{b^2}{4}}{0}{0}{0}{\mathcal{B}_0}$.
+
+Enfin, $\vect{OG}=\dfrac{a}{2}\vect{x}+\dfrac{b}{2}\vect{y}+\dfrac{c}{2}\vect{z}$; donc
+ $\inertie{O}{S}=
+\matinertie{A_1-A_2}{B_1-B_2}{C_1-A_2}{0}{0}{0}{\mathcal{B}_0}
++m\matinertie{\dfrac{b^2}{4}+\dfrac{c^2}{4}}{\dfrac{a^2}{4}+\dfrac{c^2}{4}}{\dfrac{a^2}{4}+\dfrac{b^2}{4}}{-\dfrac{bc}{4}}{-\dfrac{ac}{4}}{-\dfrac{ab}{4}}{\mathcal{B}_0}$.
+\else
+\fi
+
+
+\ifprof
+\else
+\begin{flushright}
+\footnotesize{Corrigé voir \ref{B2:10:40}.}
+\end{flushright}%
+\fi

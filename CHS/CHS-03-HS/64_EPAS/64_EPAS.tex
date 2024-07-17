@@ -1,0 +1,124 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctiontrue
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Système EPAS $\star$ \label{CHS:03:B2:16:64}}
+%% CCP MP 2007
+\setcounter{question}{0}\marginnote{\xpComp{CHS}{03}}%\UPSTIcompetence[2]{B2-16}
+\index{Compétence CHS-03}\index{Compétence B2-16}
+
+\index{EPAS}
+\index{Hyperstatisme}
+
+\ifcorrection
+\else
+\marginnote{\textbf{Pas de corrigé pour cet exercice.}}
+\fi
+
+\ifprof
+\else
+On s'intéresse à l'échelle pivotante équipant un camion de pompier. On donne un schéma cinématique du système de manoeuvre du parc échelle.
+ 
+\begin{figure}[h!]
+\centering
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{64_01.png}
+    \end{subfigure}%
+    \hfill
+    \begin{subfigure}[c]{0.45\textwidth}
+        \centering
+        \includegraphics[width=\linewidth]{64_02.png}
+    \end{subfigure}
+    %\caption{Caption place holder}
+\end{figure}
+\fi
+
+\question{Réaliser le graphe des liaisons.}
+\ifprof
+
+\begin{center}
+\includegraphics[width=10cm]{64_01_cor}
+\end{center}
+
+\else 
+\fi
+
+\question{Déterminer le degré d’hyperstatisme de ce mécanisme.}
+\ifprof
+Détermination des mobilités : 
+\begin{itemize}
+\item rotation de l'ensemble des pièces en rotation autour de $\vect{y}$ grâce à la pivot entre 0 et 1;
+\item rotation de la pivot entre 1 et 2 par mouvements opposés des pivots glissant 4--5 et 4'--5';
+\item rotation de la pivot entre 2 et 3 par mouvements simultanés des pivots glissant 6--7 et 6'--7'.
+\end{itemize}
+On a donc $m=3$. 
+
+\textbf{Méthode cinématique : }
+\begin{itemize}
+\item nombre de cycles : 15 liaisons et 12 solides, $\gamma = L- S + 1 =4$;
+\item nombre d'équations cinématiques: $E_c = 6\times 4 = 24$;
+\item nombre d'inconnues cinématiques : $I_c = 4 \times 2+ 11 \times 1 = 19$;
+\item hyperstaticité : $h=m-I_c + E_c = 3 -19 + 24 = 8$.
+\end{itemize}
+
+
+\textbf{Méthode statique : }
+\begin{itemize}
+\item nombre d'équations statiques : $E_s = 6\times 11 = 66$;
+\item nombre d'inconnues statiques : $I_s = 4 \times 4+ 11 \times 5 = 71$;
+\item hyperstaticité : $h=m-E_s + I_s = 3 -66 + 71 = 8$.
+\end{itemize}
+
+
+\else 
+\fi
+
+\question{Proposer des modifications qui permettraient de le rendre isostatique.}
+\ifprof
+On va chercher à rendre le système isostatique tout en conservant une même architecture pour des branches en parallèles.
+
+Dans le cycle 1--2--5--4--1 pris indépendamment du reste du mécanisme on a :
+\begin{itemize}
+\item $m=1$;
+\item $I_c = 1+1+2+1 = 4$;
+\item $E_c =6 \times 1$;
+\item $h_1 = m-I_c +E_c = 2 -4 +6 =4$. 
+\end{itemize}
+
+En remplaçant la pivot entre 1 et 4 par une linéaire annulaire, on ajoute 3 inconnues cinématiques et 1 mobilité. 
+On a donc $h_1 = 2$. On peut faire le même changement pour les liaisons 4' -- 5', 2 -- 6, 2 -- 6'.
+
+On a donc :
+\begin{itemize}
+\item $m=7$
+\item nombre de cycles : 15 liaisons et 12 solides, $\gamma = L- S + 1 =4$;
+\item nombre d'équations cinématiques: $E_c = 6\times 4 = 24$;
+\item nombre d'inconnues cinématiques : $I_c = 4 \times 2+ 7 \times 1+ 4 \times 4 = 31$;
+\item hyperstaticité : $h=m-I_c + E_c = 7 -31 + 24 = 0$.
+\end{itemize}
+  
+(Vérifier que les linéaires annulaires n'ajoutent pas des mobiltés supplémentaires...)
+
+\else 
+\fi
+ 
+ 
+
+\ifprof
+\else
+\ifcolle
+\else
+\marginnote[-4cm]{
+\begin{solution}
+ \begin{enumerate}
+\item .
+\item $h=8$.
+\item .
+ \end{enumerate}
+\end{solution}} 
+\fi
+
+\marginnote{\footnotesize{Corrigé  voir \ref{CHS:03:B2:16:64}.}}
+\fi

@@ -25,12 +25,12 @@ dico_comp={
     "SYS-04" : "Valider les performances d'un système vis-à-vis d'un cahier des charges",
     "SYS-05" : "Analyser les résultats d'une simulation ou d'une expérimentation",
     "SYS-06" : "Mesurer et analyser une grandeur physique",
-    "GEO" : "Résoudre un problème de géométrie",
+    "GEO"    : "Résoudre un problème de géométrie",
     "GEO-01" : "Analyser la géométrie d'un mécanisme, analyser des surfaces de contact, réaliser des constructions géométriques",
     "GEO-02" : "Modéliser un mécanisme en réalisant un schéma cinématique paramétré",
     "GEO-03" : "Résoudre un problème de géométrie : déterminer la trajectoire d'un point ou déterminer une loi Entrée - Sortie",
     "GEO-04" : "Évaluer expérimentalement des grandeurs géométriques",
-    "CIN" : "Résoudre un problème de cinématique",
+    "CIN"    : "Résoudre un problème de cinématique",
     "CIN-01" : "Analyser un mécanisme, réaliser un graphe de liaison",
     "CIN-02" : "Déterminer un vecteur vitesse, un torseur cinématique, un vecteur accélération",
     "CIN-03" : "Déterminer le rapport de transmission d'un transmetteur",
@@ -68,7 +68,7 @@ dico_comp={
     "SLCI-04" : "Modéliser un SLCI en utilisant un modèle polyphysique",
     "SLCI-05" : "Modéliser un SLCI à plusieurs entrées, sous forme matricielle éventuellement",
     "SLCI-06" : "Linéariser un comportement, une équation, simplifier un modèle",
-    "SLCI-07" : "Modéliser un système d'ordre 1 et d'ordre 2",
+    "SLCI-07" : "Modéliser un système d'ordre 1 et d'ordre 2  (modèles de connaissance et de comportement)",
     "SLCI-08" : "Déterminer une FTBO et une FTBF",
     "SLCI-09" : "Identifier des fonctions de transfert (à partir d'un schéma-bloc), mettre sous forme canonique et identifier des constantes",
     "SLCI-10" : "Déterminer et identifier une réponse temporelle",
@@ -105,7 +105,7 @@ dico_comp={
 # On fait la liste des .tex d'un dossier.
 # On crée pour chaque .tex un dictionnaire :
 # {fichier:str, time : os.path.getmtime
-chemins = ["../SYS-01"]
+
 def make_tex_list(chemins:[str]):
     """
     Réalisation de la liste de tous les fichier tex.
@@ -461,7 +461,7 @@ def make_full_pdf(chemins,dico_comp):
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
 
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
-
+    chap_ordre = ["CHS"]#,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
         fid.write("\chapter{"+dico_comp[chap]+"} \n")
@@ -469,25 +469,25 @@ def make_full_pdf(chemins,dico_comp):
 
             if (chap in comp) and ("-" in comp) :
                 fid.write("\\section{"+dico_comp[comp]+"} \n")
-
                 for file in tex_liste :
-                    if file['comp'] == comp :
-                        print(file)
-                        print(file['full_chemin'])
+                    #print(chap,comp,file['comp'])
+                    if comp in file['comp'] :
+                        #print(file)
+                        #print(file['full_chemin'])
                         chemin_image = file['chemin']+"/images/"
                         fid.write("\\graphicspath{{\\repStyle/png/}{"+chemin_image+"}} \n")
                         fid.write("\\input{"+file['full_chemin']+"} \n \n")
 
     fid.close()
-    os.chdir("../FULL_PDF")
-    os.system("pdflatex --shell-escape FULL_PDF_ExercicesCompetences.tex")
-    os.system("pdflatex --shell-escape FULL_PDF_ExercicesCompetences.tex")
-    os.chdir("../scripts")
+    # os.chdir("../FULL_PDF")
+    # os.system("pdflatex --shell-escape FULL_PDF_ExercicesCompetences.tex")
+    # os.system("pdflatex --shell-escape FULL_PDF_ExercicesCompetences.tex")
+    # os.chdir("../scripts")
+
+
+chemins = ["../SYS","../CHS"]
 
 make_full_pdf(chemins,dico_comp)
-
-
-
 
 
 
