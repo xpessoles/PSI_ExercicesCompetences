@@ -31,7 +31,7 @@ dico_comp={
     "GEO-03" : "Résoudre un problème de géométrie : déterminer la trajectoire d'un point ou déterminer une loi Entrée - Sortie",
     "GEO-04" : "Évaluer expérimentalement des grandeurs géométriques",
     "CIN"    : "Résoudre un problème de cinématique",
-    "CIN-01" : "Analyser un mécanisme, réaliser un graphe de liaison",
+    "CIN-01" : "Analyser un mécanisme, justifier des choix des liaisons, réaliser un schéma cinématique paramétré",
     "CIN-02" : "Déterminer un vecteur vitesse, un torseur cinématique, un vecteur accélération",
     "CIN-03" : "Déterminer le rapport de transmission d'un transmetteur",
     "CIN-04" : "Déterminer un loi ES cinématique, utiliser l'hypothèse de RSG",
@@ -461,7 +461,7 @@ def make_full_pdf(chemins,dico_comp):
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
 
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
-    chap_ordre = ["CHS"]#,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
+    chap_ordre = ["CIN"]#,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
         fid.write("\chapter{"+dico_comp[chap]+"} \n")
@@ -485,7 +485,7 @@ def make_full_pdf(chemins,dico_comp):
     # os.chdir("../scripts")
 
 
-chemins = ["../SYS","../CHS"]
+chemins = ["../SYS","../CHS","../CIN"]
 
 make_full_pdf(chemins,dico_comp)
 
