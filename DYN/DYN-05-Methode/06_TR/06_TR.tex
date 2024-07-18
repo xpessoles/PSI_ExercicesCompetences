@@ -5,7 +5,7 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Mouvement RT  $\star$ \label{C1:05:06:PFD}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-14}
+\setcounter{question}{0}\marginnote{\xpComp{DYN}{05}}%\UPSTIcompetence{B2-14}
 \UPSTIcompetence[2]{C1-05}
 \index{Compétence B2-14}
 \index{Compétence C1-05}
@@ -31,16 +31,16 @@ Un moteur électrique positionné entre \textbf{1} et \textbf{2}  permet d'actio
 
 L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{06_TR_01}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
-\begin{center}
-\includegraphics[width=.5\linewidth]{06_TR_02_Cor}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{06_TR_02_Cor}
+\end{marginfigure}
 \else
 \fi
 
@@ -58,7 +58,6 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 \item \textbf{On isole 2.}
 \end{itemize}
 
-\begin{minipage}[c]{.6\linewidth}
 \begin{itemize}
 \item \textbf{BAME :}
 \begin{itemize}
@@ -67,12 +66,10 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 \item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$.
 \end{itemize}
 \end{itemize}
-\end{minipage} \hfil
-\begin{minipage}[c]{.35\linewidth}
-\begin{center}
-\includegraphics[width=.8\linewidth]{06_TR_03_Cor}
-\end{center}
-\end{minipage}
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{06_TR_03_Cor}
+\end{marginfigure}
 
 \begin{itemize}
 \item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $C_{\text{mot}}+\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
@@ -81,13 +78,10 @@ $\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto
 $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 \end{itemize}
 
-\vspace{.5cm}
-
 \begin{itemize}
 \item \textbf{On isole 1+2.}
 \end{itemize}
 
-\begin{minipage}[c]{.6\linewidth}
 \begin{itemize}
 \item \textbf{BAME :}
 \begin{itemize}
@@ -97,12 +91,10 @@ $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 \item action du vérin $\torseurstat{T}{\text{ver}}{1}$;.
 \end{itemize}
 \end{itemize}
-\end{minipage} \hfil
-\begin{minipage}[c]{.35\linewidth}
-\begin{center}
+
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{06_TR_04_Cor}
-\end{center}
-\end{minipage}
+\end{marginfigure}
 
 \begin{itemize}
 \item \textbf{Théorème :} on applique le théorème de la résultante dynamique à l'ensemble \textbf{1+2} en projection sur 
@@ -116,7 +108,7 @@ $\vectrd{1+2}{0} = \vectrd{1}{0} +\vectrd{2}{0}$  $= m_1\vectg{G_1}{1}{0} +m_2 \
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C1:05:06:PFD}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{C1:05:06:PFD}.}
+
 \fi
