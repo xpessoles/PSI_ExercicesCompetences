@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Fonctions de transfert$\star$ \label{B2:07:500}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{FTBO}
 \index{FTBF}
@@ -21,9 +21,9 @@
 \ifprof 
 \else
 Soit le schéma-blocs suivant.
-\begin{center}
-\includegraphics[width=.9\linewidth]{500_01}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{500_01}
+\end{marginfigure}
  \fi
  
 \question{Déterminer la fonction de transfert en boucle ouverte. Mettre l'expression sous forme canonique et exprimer les paramètres caractéristiques.}
@@ -64,9 +64,9 @@ $\xi_{\text{BF}}=\dfrac{RJ+Lf}{2\sqrt{LJ}\sqrt{Rf+K^2}}$.
 \ifprof 
 \else
 Soit le schéma-blocs suivant.
-\begin{center}
-\includegraphics[width=.9\linewidth]{500_02}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{500_02}
+\end{marginfigure}
  \fi
  
  \question{Déterminer la fonction de transfert en boucle ouverte. Mettre l'expression sous forme canonique et exprimer les paramétres caractéristiques.}
@@ -93,12 +93,12 @@ On a donc $K_{\text{BF}}=\dfrac{A}{B+AC}$ et $\tau_{\text{BF}}=\dfrac{1}{B+AC}$.
 
 %\question{Réaliser le schéma-blocs.}
 %\ifprof
-%\begin{figure}[H]
+%\begin{marginfigure}
 %\centering
 %\includegraphics[width=\linewidth]{51_01_c}
 %%\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
 %%fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-%\end{figure}
+%\end{marginfigure}
 %\else
 %\fi
 
@@ -107,12 +107,7 @@ On a donc $K_{\text{BF}}=\dfrac{A}{B+AC}$ et $\tau_{\text{BF}}=\dfrac{1}{B+AC}$.
 
 \ifprof
 \else
-\footnotesize
-
-\noindent
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications
+\begin{solution}
 \begin{enumerate}
 \item $K_{\text{BO}}=\dfrac{K^2}{Rf}$, 
 $\omega_{\text{BO}} = \sqrt{\dfrac{Rf}{LJ}}$,
@@ -121,11 +116,8 @@ $\xi_{\text{BO}} =\dfrac{RJ+Lf}{2\sqrt{LJRf}}$.
 $\xi_{\text{BF}}=\dfrac{RJ+Lf}{2\sqrt{LJ}\sqrt{Rf+K^2}}$.
 \item $K_{\text{BO}}=\dfrac{AC}{B}$ et $\tau_{\text{BO}}=\dfrac{1}{B}$.
 \item $K_{\text{BF}}=\dfrac{A}{B+AC}$ et $\tau_{\text{BF}}=\dfrac{1}{B+AC}$.
-\end{enumerate} \\
-\hline
-\end{tabular}
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:500}.}
-\end{flushright}%
+\end{enumerate}
+\end{solution}
+\marginnote{Corrigé voir \ref{B2:07:500}.}
+
 \fi

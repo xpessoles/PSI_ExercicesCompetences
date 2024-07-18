@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Diagramme de Bode$\star$ \label{C2:02:510_02}}
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-02}
-\index{Compétence C2-02}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{11}}%\UPSTIcompetence[2]{C2-02}
+\index{Compétence C2-02}\index{Compétence SLCI-11}
 \index{Diagramme de Bode}
 \ifcorrection
 \else
@@ -22,16 +22,16 @@
 
 $F_2(p)=\dfrac{1}{\left(1+10p\right)\left(1+\dfrac{p}{10}\right)}$
 
-\begin{center}
-\includegraphics[width=.9\linewidth]{tab_02}
-\end{center}
+\begin{figure}[!h]
+\includegraphics[width=\linewidth]{tab_02}
+\end{figure}
 
 
 \textbf{Positionnement du diagramme de gain}
 Lorsque que $\omega$ tend vers 0, le gain tend vers $20 \log 1 = \SI{0}{dB}$.
 
 
-\begin{center}
+\begin{figure}[!h]
  \begin{tikzpicture}[xscale=1.5]
 \tikzset{
 semilog lines/.style={thin, bleuxp}, 
@@ -61,17 +61,17 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \BodeArg[orangexp,ultra thick]{-3:3}{\POArg{1}{10} + \POArg{1}{0.1}}
 \end{scope}
 \end{tikzpicture}
-\end{center}
+\end{figure}
 %
-%\begin{center}
-%\includegraphics[width=.9\linewidth]{bode_02}
-%\end{center}
+%\begin{marginfigure}
+%\includegraphics[width=\linewidth]{bode_02}
+%\end{marginfigure}
 
 \else 
-%\begin{center}
-%\includegraphics[width=.9\linewidth]{510_01}
-%\end{center}
-\begin{center}
+%\begin{marginfigure}
+%\includegraphics[width=\linewidth]{510_01}
+%\end{marginfigure}
+\begin{figure}[!h]
  \begin{tikzpicture}[xscale=1.5]
 \tikzset{
 semilog lines/.style={thin, bleuxp}, 
@@ -93,7 +93,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \semilog{-3}{3}{-180}{90}
 \end{scope}
 \end{tikzpicture}
-\end{center}
+\end{figure}
 \fi
 
 
@@ -111,7 +111,7 @@ $s(t) = 5,6 \sin\left(0,1 t - \dfrac{\pi}{4}\right)$.
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:02:510_02}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{C2:02:510_02}.}
+
 \fi

@@ -5,7 +5,7 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Identification temporelle $\star$ \label{B2:06:502}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-06}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{07}}%\UPSTIcompetence[2]{B2-06}
 \index{Compétence B2-06}
 \index{Identification}
 \index{Identification temporelle}
@@ -20,16 +20,16 @@
 \ifprof 
 \else
 Soit la réponse à un échelon.
-\begin{center}
-\includegraphics[width=.9\linewidth]{502_01}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{502_01}
+\end{marginfigure}
 \fi
 
 \question{Déterminer la fonction de transfert du système.}
 \ifprof
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=8cm]{502_01_cor}
-\end{center}
+\end{marginfigure}
 
 La tangente à l'origine est non nulle. Il n'y a pas de dépassement. On va donc identifier un système d'ordre 1 de la forme $H(p)=\dfrac{K}{1+\tau p}$.
 
@@ -54,16 +54,16 @@ On a donc $H(p)=\dfrac{3,5}{1+8p}$.
 \else
 Soit la réponse à un échelon d'amplitude 2,5.
 
-\begin{center}
-\includegraphics[width=.9\linewidth]{502_02}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{502_02}
+\end{marginfigure}
 \fi
 
 \question{Déterminer la fonction de transfert du système en réalisant les mesures nécessaires et en utilisant les formules appropriées.}
 \ifprof
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=8cm]{502_02_cor}
-\end{center}
+\end{marginfigure}
 
 La tangente à l'origine est nulle et il y a des dépassements. On modélise le système par un système d'ordre 2. 
 $H(p)=\dfrac{K}{1+\dfrac{2\xi}{\omega_0}p+\dfrac{p^2}{\omega_0^2}}$.
@@ -101,35 +101,30 @@ De plus, on mesure $T_{5\%}\times \omega_0 =8$ avec $T_{5\%}=\SI{0,51}{s}$ on a 
 
 Au final, $H(p)=\dfrac{0,5}{1+\dfrac{2\times 0,3}{16}p+\dfrac{p^2}{16^2}}$.
 \begin{center}
-\includegraphics[width=8cm]{502_03_cor}
-\includegraphics[width=8cm]{502_04_cor}
-\includegraphics[width=8cm]{502_05_cor}
+\includegraphics[width=\linewidth]{502_03_cor}
+\includegraphics[width=\linewidth]{502_04_cor}
+\includegraphics[width=\linewidth]{502_05_cor}
 \end{center}
 \else
-\begin{center}
-\includegraphics[width=8cm]{502_03}
-\end{center}
-\begin{center}
-\includegraphics[width=8cm]{502_04}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{502_03}
+\end{marginfigure}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{502_04}
+\end{marginfigure}
 \fi
 
 
 \ifprof
 \else
-\footnotesize
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
+\begin{solution}
 \begin{enumerate}
 \item  $H(p)=\dfrac{3,5}{1+8p}$.
 \item $H(p)=\dfrac{0,5}{1+\dfrac{2\times 0,1}{14,25}p+\dfrac{p^2}{14,25^2}}$.
 \item $H(p)=\dfrac{0,5}{1+\dfrac{2\times 0,3}{16}p+\dfrac{p^2}{16^2}}$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\normalsize
+\end{enumerate}
+\end{solution}
 
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:06:502}.}
-\end{flushright}%
+\marginnote{Corrigé voir \ref{B2:06:502}.}
+
 \fi

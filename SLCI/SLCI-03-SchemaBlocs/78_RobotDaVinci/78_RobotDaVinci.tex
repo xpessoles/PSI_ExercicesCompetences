@@ -7,8 +7,8 @@
 
 % Concours Mines Ponts MP -- PSI --  2013
 
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Robot}
 \ifcorrection
@@ -38,10 +38,10 @@ bras maîtres dont les extrémités sont maintenues dans chaque main ;
 \item les bras esclaves reçoivent les consignes issues du chirurgien par l’intermédiaire des bras maîtres. Il y a au
 total 3 bras esclaves : deux manipulent chacun un outil, le troisième manipule une caméra.
 \end{itemize}
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_02}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 
 Le mouvement de l'axe 1 est régi par l'équation suivante : 
@@ -60,13 +60,13 @@ avec $\Delta \theta_{c1}(p)$ la consigne de position angulaire exprimée dans le
 
 \question{Compléter le schéma-blocs.}
 \ifprof
-\begin{corrige} ~\\
-
 \begin{center}
 \includegraphics[width=\linewidth]{cor_02}
+
+\includegraphics[width=\linewidth]{cor_03}
 %\textit{}
 \end{center}
-
+\begin{corrige} 
 
 En utilisant l'équation électrique du MCC, on a 
 $U_1(p)=\left(L p   + R\right)I_1(p)+E_1(p)$. En utilisant le schéma-blocs :  $I_1(p)=\left(U_1(p) - E(p)\right) D(p)$. On a donc 
@@ -109,10 +109,7 @@ $U_1(p)= \Delta \theta_{c1}(p) \left(\sigma_1 + \dfrac{\sigma_2}{p} +\sigma_4\ri
 On aura donc $B(p)=\sigma_1 + \dfrac{\sigma_2}{p}$, $C(p)=\sigma_3 p$ et  $A(p)=\sigma_4$.
 
 
-\begin{center}
-\includegraphics[width=\linewidth]{cor_03}
-%\textit{}
-\end{center}
+
 \end{corrige}
 \else
 \fi
@@ -159,18 +156,16 @@ $= K \dfrac{\left(\sigma_1+ \sigma_4 \right) p + \sigma_2 }{ \tau p^3 + p^2\left
 
 \ifprof
 \else
-\begin{center}
-\rotatebox{90}{\includegraphics[height=.9\linewidth]{fig_03}}
-%\textit{Schéma-blocs de l'asservissement du dosseret \label{fig6}}
-\end{center}
+\begin{figure}[!h]
+\includegraphics[height=.9\linewidth]{fig_03}
+\end{figure}
 \fi
 
 
 \ifprof
 \else
-\footnotesize
-\begin{tabular}{|p{.95\linewidth}|}
-\hline
+
+\begin{solution}
 \begin{enumerate}
 \item 
 $A(p)=\sigma_4$,
@@ -183,11 +178,9 @@ $G(p)=\dfrac{1}{Jp}$,
 $H(p)=\dfrac{1}{p}$.
 \item $K = \dfrac{1}{k_e}$ et $\tau = \dfrac{RJ}{k_t k_e}$.
 \item $B_F(p) = K \dfrac{\left(\sigma_1+ \sigma_4 \right) p + \sigma_2 }{ \tau p^3 + p^2\left(1+\sigma_3 \right)  + \sigma_1 K p + \sigma_2 K  }$.
-\end{enumerate} \\
-\hline
-\end{tabular}
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:78}.}
-\end{flushright}%
+\end{enumerate}
+\end{solution}
+
+\marginnote{Corrigé voir \ref{B2:07:78}.}
+
 \fi

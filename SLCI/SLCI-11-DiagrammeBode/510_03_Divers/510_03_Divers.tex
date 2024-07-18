@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Diagramme de Bode$\star$ \label{C2:02:510_03}}
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-02}
-\index{Compétence C2-02}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{11}}%\UPSTIcompetence[2]{C2-02}
+\index{Compétence C2-02}\index{Compétence SLCI-11}
 \index{Diagramme de Bode}
 \ifcorrection
 \else
@@ -21,16 +21,16 @@
 
 \textbf{Tracer asymptotique}
 
-\begin{center}
-\includegraphics[width=.9\linewidth]{tab_03}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{tab_03}
+\end{marginfigure}
 
 
 \textbf{Positionnement du diagramme de gain}
 Lorsque que $\omega$ tend vers 0, $F_3(p)\simeq \dfrac{40}{p}$. Cette asymptote de pente \SI{-20}{dB/decade} passe par le point $(40,0)$. 
 
 
-\begin{center}
+\begin{figure}[!h]
  \begin{tikzpicture}[xscale=2]
 \tikzset{
 semilog lines/.style={thin, bleuxp}, 
@@ -58,16 +58,16 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \BodeArg[orangexp,ultra thick]{-4:-1}{\POArg{40}{300}+\IntArg{1}}
 \end{scope}
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
-%\begin{center}
-%\includegraphics[width=.9\linewidth]{bode_03}
-%\end{center}
+%\begin{marginfigure}
+%\includegraphics[width=\linewidth]{bode_03}
+%\end{marginfigure}
 
 \else 
 
 
-\begin{center}
+\begin{figure}[!h]
  \begin{tikzpicture}[xscale=2]
 \tikzset{
 semilog lines/.style={thin, bleuxp}, 
@@ -86,11 +86,11 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 \semilog{-4}{-1}{-180}{90}
 \end{scope}
 \end{tikzpicture}
-\end{center}
+\end{figure}
 
-%\begin{center}
-%\includegraphics[width=.9\linewidth]{510_01}
-%\end{center}
+%\begin{marginfigure}
+%\includegraphics[width=\linewidth]{510_01}
+%\end{marginfigure}
 \fi
 
 
@@ -112,7 +112,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:02:510_03}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{C2:02:510_03}.}
+
 \fi

@@ -5,7 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Moteur à courant continu$\star$ \label{B2:04:51}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-04}
+\setcounter{question}{0}%\UPSTIcompetence[2]{B2-04}
+\marginnote{\xpComp{SLCI}{02}}
 \index{Compétence B2-04}
 \index{Fonctions de transfert}
 \index{Moteur à courant continu}
@@ -163,9 +164,7 @@ Enfin, $\xi$ est sans unité... à vérifier :)
 
 \ifcolle
 \else
-\noindent\footnotesize
-\fbox{\parbox{.9\linewidth}{
-Éléments de corrigé : 
+\marginnote{\begin{corrige}
 \begin{enumerate}
     \item $H(p)=\dfrac{K_m}{K_m^2 +\left(R +Lp\right) \left( Jp +f \right)} $.
     \item Ordre 2, classe 0.
@@ -173,11 +172,9 @@ Enfin, $\xi$ est sans unité... à vérifier :)
     \item $K = \dfrac{K_m}{K_m^2+ Rf}$,
 $\omega_0=\sqrt{\dfrac{K_m^2+ Rf}{LJ}}$,
 $\xi = \dfrac{RJ  + Lf}{2\sqrt{{LJ\left(K_m^2+ Rf\right)}}}$.
-\end{enumerate}}}
-\normalsize
-\fi
+\end{enumerate}
+\end{corrige}}
 
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:04:51}.}
-\end{flushright}%
+\fi
+\marginnote{Corrigé voir \ref{B2:04:51}.}
 \fi

@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Quille pendulaire$\star$ \label{B2:07:48}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Fonctions de transfert}
 \index{Quille pendulaire}
@@ -20,8 +20,8 @@
 \else
 Le comportement d'un vérin est défini par le modèle continu ci-dessous.
 
-\footnotesize
-\begin{center}
+
+\begin{figure}
 \begin{tikzpicture}
 \sbEntree{E}
 
@@ -55,8 +55,8 @@ Le comportement d'un vérin est défini par le modèle continu ci-dessous.
 \draw [latex-] (c2) --++ (0,1) node[left] {$F_R(p)$};
 
 \end{tikzpicture}
-\end{center}
-\normalsize
+\end{figure}
+
 
 On a : 
 \begin{itemize}
@@ -109,7 +109,7 @@ Au final,  $A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = 
 Le schéma-blocs de la figure précédente peut se mettre sous la forme suivante. 
 
 \footnotesize
-\begin{center}
+\begin{marginfigure}
 \begin{tikzpicture}
 \sbEntree{E}
 
@@ -147,7 +147,7 @@ Le schéma-blocs de la figure précédente peut se mettre sous la forme suivante
 \draw [latex-] (c1) --++ (0,1) node[left] {$F_R(p)$};
 
 \end{tikzpicture}
-\end{center}
+\end{marginfigure}
 \normalsize
 
 \fi
@@ -172,7 +172,7 @@ Revient à utiliser la méthode précédente.
 Le schéma-blocs proposé est équivalent au schéma suivant. 
 
 \footnotesize
-\begin{center}
+\begin{figure}[!h]
 \begin{tikzpicture}
 \sbEntree{E}
 
@@ -220,7 +220,7 @@ Le schéma-blocs proposé est équivalent au schéma suivant.
 \draw [latex-] (c2) --++ (0,1) node[left] {$F_R(p)$};
 
 \end{tikzpicture}
-\end{center}
+\end{figure}
 \normalsize
 
 On retrouve le même résultat que précédemment. 
@@ -253,18 +253,14 @@ Dans ce cas, $\dfrac{X(p)}{Q(p)}=H_1(p)H_2(p)=\dfrac{2BS}{p\left(MVp^2  +\lambda
 
 \ifprof
 \else
-\footnotesize
-\noindent
-\begin{tabular}{|p{.95\linewidth}|}
-\hline
+\begin{solution}
 \begin{enumerate}
 \item $A_1=\dfrac{1}{Sp}$,  $A_2 = \dfrac{S2B}{V} $,  $A_3 = S$  et $A_4 = \dfrac{1}{Mp^2  +\lambda p  + k}$.
 \item $H_1(p)=A_1  A_2A_3$ et $H_2 = \dfrac{A_4}{1+ A_2A_3A_4 }$.
 \item $\dfrac{X(p)}{Q(p)}=\dfrac{2BS}{p\left(MVp^2  +\lambda pV  + kV+ 2BS^2\right) }$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:47}.}
-\end{flushright}%
+\end{enumerate} 
+\end{solution}
+
+\marginnote{Corrigé voir \ref{B2:07:47}.}
+
 \fi

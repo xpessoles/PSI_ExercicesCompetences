@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Moteur à courant continu$\star$ \label{B2:07:51}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Moteur à courant continu}
 \index{MCC}
@@ -29,12 +29,12 @@ On donne les équations du moteur à courant continu :
 
 \question{Réaliser le schéma-blocs.}
 \ifprof
-\begin{figure}[H]
+\begin{marginfigure}
 \centering
-\includegraphics[width=.7\linewidth]{51_01_c}
+\includegraphics[width=\linewidth]{51_01_c}
 %\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
 %fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-\end{figure}
+\end{marginfigure}
 \else
 \fi
 
@@ -42,12 +42,12 @@ On donne les équations du moteur à courant continu :
 
 \question{Mettre le schéma-blocs sous la forme suivante.}
 \ifprof
-\begin{figure}[H]
+\begin{marginfigure}
 \centering
-\includegraphics[width=.7\linewidth]{51_01}
+\includegraphics[width=\linewidth]{51_01}
 %\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
 %fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-\end{figure}
+\end{marginfigure}
 
 
 En utilisant le schéma-blocs proposé, on a $\Omega(p) = \left(C_r(p)A(p)+U(p)B(p)\right)C(p)$.
@@ -74,12 +74,12 @@ On a donc aussi,  $A(p)=R+Lp$, $B(p)={K}$, $C(p)=\dfrac{1}{K^2+\left(f+Jp \right
 
 
 \else
-\begin{figure}[H]
+\begin{marginfigure}
 \centering
-\includegraphics[width=.7\linewidth]{51_01}
+\includegraphics[width=\linewidth]{51_01}
 %\caption{Évolution du couple utile en fonction de la vitesse de rotation pour des
 %fréquences de commande de \SI{90}{Hz} à \SI{110}{Hz}. \label{fig_50_04}}
-\end{figure}
+\end{marginfigure}
 \fi
 
 
@@ -91,16 +91,14 @@ On a donc aussi,  $A(p)=R+Lp$, $B(p)={K}$, $C(p)=\dfrac{1}{K^2+\left(f+Jp \right
 
 \ifcolle
 \else
-\noindent\footnotesize
-\fbox{\parbox{.9\linewidth}{
-Éléments de corrigé : 
+\begin{solution}
 \begin{enumerate}
     \item .
     \item $A(p)=R+Lp$, $B(p)={K}$, $C(p)=\dfrac{1}{K^2+\left(f+Jp \right)\left(R+Lp \right)}$ (plusieurs réponses possibles). 
-\end{enumerate}}}
-\normalsize
+\end{enumerate}
+\end{solution}
 \fi
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:51}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:51}.}
+
 \fi

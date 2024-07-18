@@ -8,8 +8,8 @@
 
 % Concours Banque PT SIA -  2011
 
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Clever}
 \ifcorrection
@@ -30,11 +30,11 @@ L'habitacle peut s'incliner grâce à un système constitué
 \item d'un système de contrôle de l'inclinaison de l'habitacle.
 \end{itemize}
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=.47\linewidth]{fig_02}
 \includegraphics[width=.47\linewidth]{fig_03}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 %La chaîne de transmission de puissance et d'adaptation de mouvement est composée :
 %\begin{itemize}
@@ -59,9 +59,9 @@ L'orientation de l'habitacle est contrôlée par un asservissement de la positio
 
 On modélise le comportement du servo-distributeur par un gain pur noté $K_s$ et le capteur par $H_c(p)=C$ avec $C=\SI{1}{V.rad^{-1}}$.  L'adaptateur mécanique a un comportement linéaire sur l'intervalle d'utilisation. On a donc $H_{\text{am}}(p)=R$ ($R=\SI{7}{rad.m^{-1}}$). Enfin, on considère que $H_r(p)=1$. 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_05}
-\end{center}
+\end{marginfigure}
 
 À ce stade de l'étude, le modèle de comportement du fluide correspond à un comportement incompressible. L'équation caractérisant le comportement du vérin est alors : $q(t)=S\dot{\lambda}(t)$ où :
 \begin{itemize}
@@ -74,8 +74,7 @@ On modélise le comportement du servo-distributeur par un gain pur noté $K_s$ e
 
 \question{Donner l'expression de la fonction de transfert du vérin $H_{V1}(p)$ (telle que $\lambda(p) = H_{V1}(p) Q(p)$) et compléter le schéma-bloc associé à la modélisation actuelle du système.}
 \ifprof
-\begin{corrige} ~\\
-
+\begin{corrige} 
 \begin{center}
 \includegraphics[width=.95\linewidth]{cor_01}
 %\textit{}
@@ -90,7 +89,7 @@ $\dfrac{K_1}{1+\tau_1 p}$ en précisant les expressions de $K_1$ et de $\tau_1$.
 \begin{corrige} ~\\
 
 \begin{center}
-\includegraphics[width=.95\linewidth]{cor_02}
+\includegraphics[width=.5\linewidth]{cor_02}
 %\textit{}
 \end{center}
 \end{corrige}
@@ -142,10 +141,10 @@ Par ailleurs, $F_v(t)+k_g \lambda(t)=m_{\text{eq}}\ddot{\lambda}(t)$ avec $m_{\t
 \end{corrige}
 \else
 \fi
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_06}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 
 \ifprof
@@ -188,10 +187,10 @@ $q(t)=S\dot{\lambda}(t)+\dfrac{V_0}{B} \dot{p}_r(t)-\delta p_r(t)$ où $\delta$ 
 \end{corrige}
 \else
 \fi
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_08}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 
 \question{Déterminer l'expression de la fonction de transfert $H_{V3}$ (telle que $\lambda(p) =  H_{V3} Q(p)$) associée au comportement dynamique du vérin ainsi modélisé. On donnera le résultat sous la forme suivante : 
@@ -212,10 +211,10 @@ Donner l'expression de $a_1$ en fonction de $M_{eq}$, $\delta$ et $S$ et déterm
 \subsection*{Retour sur le cahier des charges}
 Le régulateur étant a priori optimisé, on réalise un essai de validation du comportement temporel de l'inclinaison de l'habitacle, le véhicule étant à l'arrêt. Le calculateur envoie un signal de consigne représentant l'évolution de la position angulaire souhaitée (de 0 à 45\degres en \SI{0,75}{s}). 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_09}
 %\textit{}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Quels sont les critères du cahier des charges validés ?}
@@ -225,7 +224,6 @@ Le régulateur étant a priori optimisé, on réalise un essai de validation du 
 \includegraphics[width=.95\linewidth]{cor_10}
 %\textit{}
 \end{center}
-
 \end{corrige}
 \else
 \fi
@@ -234,7 +232,7 @@ Le régulateur étant a priori optimisé, on réalise un essai de validation du 
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:80}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:80}.}
+
 \fi

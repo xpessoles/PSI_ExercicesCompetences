@@ -8,8 +8,8 @@
 
 % Concours Banque PT SIA -  2011
 
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Robot}
 \ifcorrection
@@ -30,23 +30,23 @@ consécutives à des commandes de pilotage.
 La DGA (Direction Générale de l'Armement) dispose dans son centre d'essais des propulseurs de bancs d'essais
 dédiés à la certification et à la mise au point de différents types de propulseurs d'avions ou de missiles.
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_02}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 Le banc d'essai est composé d'un tube représentant le corps du réacteur et d'une tuyère à ouverture variable
 actionnée par quatre vérins hydrauliques et permettant de faire varier la vitesse de l'air éjecté. 
 
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[width=.8\linewidth]{fig_03}
 %%\textit{}
-%\end{center}
+%\end{marginfigure}
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=.8\linewidth]{fig_04}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 \fi
 
@@ -96,10 +96,10 @@ En considérant les actions de pesanteur négligeables et en se plaçant dans un
 \end{corrige}
 \else
 \
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_05}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 On note $F_R$ l'action mécanique résistante équivalente pour quatre volets. On a $F_R(t) = K_F x(t)$. L'application du théorème de l'énergie cinétique se traduit par $M_{\text{eq}}\ddot{x}(t)=\left(F_V(t)-F_R(t)\right)$. 
 \fi
@@ -141,7 +141,7 @@ Afin de valider le modèle établi, on se propose d'étudier le comportement en 
 \ifprof
 \begin{corrige} ~\\
 \begin{center}
-\includegraphics[width=\linewidth]{cor_04}
+\includegraphics[width=.5\linewidth]{cor_04}
 \end{center}
 \end{corrige}
 \else
@@ -173,7 +173,7 @@ Pour pallier le problème de stabilité du modèle précédemment établi, une s
 \ifprof
 \begin{corrige} ~\\
 \begin{center}
-\includegraphics[width=.95\linewidth]{cor_06}
+\includegraphics[width=.5\linewidth]{cor_06}
 \end{center}
 \end{corrige}
 \else
@@ -184,18 +184,18 @@ On donne la réponse à un échelon et à une rampe de pente \SI{25}{mm.s^{-1}}.
 \question{Le cahier des charges est-il vérifié ?}
 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{echelon}
 \includegraphics[width=\linewidth]{rampe}
 %\textit{}
-\end{center}
+\end{marginfigure}
 
 
 
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:79}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:79}.}
+
 \fi

@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Robovolc $\star$ \label{B2:07:71}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Robovolc}
 \ifcorrection
@@ -18,9 +18,9 @@
 \else
 
 On considère le schéma-blocs suivant.
-\begin{center}
+\begin{figure}[!h]
 \includegraphics[width=9cm]{71_01}
-\end{center}
+\end{figure}
 \fi
 \question{En considérant $P_F=0$ (perturbation nulle) et $L=0$ (inductance nulle), calculer la fonction de transfert
 $\dfrac{F_S^y}{F_c}$ et la mettre sous la forme canonique $\dfrac{K}{1+Ap+Bp^2}$. Identifier les paramètres $K$,
@@ -46,16 +46,13 @@ $B=\dfrac{RJ_{\text{eq}}}{R+C_f K_t K_r K_ve K_{\beta} }$.
 \ifcolle
 \else
 \footnotesize
-\noindent
-\begin{tabular}{|p{.95\linewidth}|}
-\hline
+\begin{solution}
 \begin{enumerate}
 \item $K=\dfrac{C_f K_t K_r K_{ve} K_{\beta}}{R+C_f K_t K_r K_{ve} K_{\beta}}$,
 $A=\dfrac{K_e K_t}{R+C_f K_t K_r K_{ve} K_{\beta} }$,
 $B=\dfrac{RJ_{\text{eq}}}{R+C_f K_t K_r K_ve K_{\beta} }$.
-\end{enumerate} \\ \hline
-\end{tabular}
-\normalsize
+\end{enumerate} 
+\end{solution}
 \fi
 
 \fi
@@ -63,7 +60,7 @@ $B=\dfrac{RJ_{\text{eq}}}{R+C_f K_t K_r K_ve K_{\beta} }$.
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:71}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:71}.}
+
 \fi

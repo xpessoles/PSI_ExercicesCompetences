@@ -5,7 +5,7 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Identification $\star$ \label{B2:06:503}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-06}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{07}}%\UPSTIcompetence[2]{B2-06}
 \index{Compétence B2-06}
 \index{Identification}
 \index{Identification Bode}
@@ -20,21 +20,20 @@
 
 \ifprof 
 \else
-\begin{flushright}
-D'après Florestan Mathurin.
-\end{flushright}
+
+\marginnote{D'après Florestan Mathurin.}
 
 Soit un système dont le diagramme de Bode est donné ci-dessous.
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{503_01}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Tracer le diagramme de Bode asymptotique.}
 \ifprof
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=8cm]{503_01_cor}
-\end{center}
+\end{marginfigure}
 \else
 \fi
 
@@ -63,15 +62,15 @@ Par suite,
  En réalisant les applications numériques, on a $\xi = \sqrt{\dfrac{4-\sqrt{\Delta}}{16}} = 0,23$.
   
 Alors, $H(p)=\dfrac{1}{1+\dfrac{2\times 0,23}{4,5}p+\dfrac{p^2}{4,5^2}}$.
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=8cm]{503_02_cor}
-\end{center}
+\end{marginfigure}
 \else
 
 Le diagramme temporel ci-dessous présente 3 signaux d'entrée sinusoïdaux.
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{503_02}
-\end{center}
+\end{marginfigure}
 
 \fi
 
@@ -88,9 +87,9 @@ Le diagramme temporel ci-dessous présente 3 signaux d'entrée sinusoïdaux.
 
 \question{En déduire le gain et le déphasage en régime permanent pour chacune des courbes temporelles de sortie correspondant aux 3 entrées.}
 \ifprof
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=8cm]{503_03_cor}
-\end{center}
+\end{marginfigure}
 
 \begin{itemize}
 \item Pour  $\omega = \SI{1,5}{rad/s}$, $G_{\text{dB}}=1 \Rightarrow 20\log K = 1 \Rightarrow  K = 10^{1/20} = 1,12$ et $\varphi =  -\SI{0,17}{rad}$. On a donc $s(t)=1,12\sin\left(\omega t - 0,17\right)$.
@@ -107,11 +106,9 @@ $\varphi =  -\SI{2,8}{rad}$. On a donc $s(t)=0,3\sin\left(\omega t - 2,8\right)$
 
 \ifprof
 \else
-\footnotesize
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
+
+
+\begin{solution}
 \begin{enumerate}
 \item .
 \item $H(p)=\dfrac{1}{1+\dfrac{2\times 0,23}{4,5}p+\dfrac{p^2}{4,5^2}}$.
@@ -127,11 +124,10 @@ Indications :
 \item $s(t)=1,8\sin\left(\omega t - 2,1\right)$.
 \item $s(t)=0,3\sin\left(\omega t - 2,8\right)$.
 \end{itemize}
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:06:503}.}
-\end{flushright}%
+\end{enumerate}
+\end{solution}
+
+
+\marginnote{Corrigé voir \ref{B2:06:503}.}
+
 \fi

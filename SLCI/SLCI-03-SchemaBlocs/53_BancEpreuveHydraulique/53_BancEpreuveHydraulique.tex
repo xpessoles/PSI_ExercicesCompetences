@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{Banc d'épreuve hydraulique $\star$ \label{B2:07:53}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Banc d'épreuve hydraulique}
 \ifcorrection
@@ -20,17 +20,17 @@
 \subsubsection*{Analyse de la fonction technique << mettre le tube sous pression >>.}
 
 Un schéma hydraulique simplifié est donné figure suivante.
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{fig_01}
 
-\end{center}
+\end{marginfigure}
 
 
 \subsubsection*{Mise en place du modèle}
 
 Les équations du débit sont : 
-$$Q_e(t)=S_e\dfrac{\dd z(t)}{\dd t} - \dfrac{V_{e0}}{B_e}\dfrac{\dd P_e(t)}{\dd t}$$ et 
-$$Q_h(t)=S_h\dfrac{\dd z(t)}{\dd t} + \dfrac{V_{h0}}{B_h}\dfrac{\dd P_h(t)}{\dd t}.$$
+$Q_e(t)=S_e\dfrac{\dd z(t)}{\dd t} - \dfrac{V_{e0}}{B_e}\dfrac{\dd P_e(t)}{\dd t}$ et 
+$Q_h(t)=S_h\dfrac{\dd z(t)}{\dd t} + \dfrac{V_{h0}}{B_h}\dfrac{\dd P_h(t)}{\dd t}.$
 
 En appliquant le théorème de la résultante dynamique selon $\vect{z}$ sur le piston du multiplicateur, on a : 
 $
@@ -84,15 +84,15 @@ $mp^2{L}(p)=-rL(p)+\left(S_a-S_b \right)P_e(p)-f'p{L}(p)$.
 \ifprof
 \includegraphics[width=\linewidth]{cor_01}
 \else
-\begin{center}
-\rotatebox{90}{\includegraphics[height=.8\linewidth]{fig_10}}
-\end{center}
+\begin{figure}[!h]
+{\includegraphics[height=\linewidth]{fig_10}}
+\end{figure}
 \fi
  
 
 \ifprof
 \else
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:52}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:52}.}
+
 \fi

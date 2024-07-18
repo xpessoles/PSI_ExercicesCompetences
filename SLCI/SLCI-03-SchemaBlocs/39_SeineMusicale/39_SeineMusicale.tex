@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{11}
 
 \exer{La Seine Musicale$\star$ \label{B2:07:39}}
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}
 \index{La Seine Musicale}
 \ifcorrection
 \else
@@ -16,9 +16,8 @@
 \ifprof
 \else
 Soit le schéma-blocs suivant. 
-\begin{figure}[H]
-\centering
-\rotatebox{90}{\includegraphics[width=.7\textheight]{39_01}}
+\begin{figure}
+\includegraphics[width=\linewidth]{39_01}
 %\caption{ \label{fig_39_01}}
 \end{figure}
 \fi
@@ -114,10 +113,7 @@ Par suite, $X_{ch}(p)=\left(H_f(p) \Omega_c(p) + H_r(p) C_{\text{pert}}(p)\right
 
 \ifprof
 \else
-\footnotesize
-\noindent \begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications : 
+\begin{solution}
 \begin{enumerate}
 \item $ H_f(p)=
 \dfrac{K_a }{\left( k_ek_c+CK_hK_{\text{capt}} k_c\right)} \dfrac{CK_h k_c}{\dfrac{J_{eq}\left(R+Lp\right)}{k_ek_c+CK_hK_{\text{capt}} k_c}p+1} $.
@@ -126,11 +122,9 @@ $\gamma = \dfrac{R J_{eq}}{\left( C K_h K_{\text{capt}}+k_e\right) k_c} $,
 $\delta = \dfrac{LJ_{eq}}{\left( C K_h K_{\text{capt}}+k_e\right) k_c}$.
 \item $X_{ch}(p)=\left(H_f(p) \Omega_c(p) + H_r(p) C_{\text{pert}}(p)\right) \dfrac{DK_{\text{red}}}{2p}$.
 \end{enumerate}
-\\ \hline
-\end{tabular}
-\normalsize
+\end{solution}
 
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:39}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:39}.}
+
 \fi

@@ -8,8 +8,8 @@
 
 % Concours Mines Ponts MP -- PSI --  2013
 
-\setcounter{question}{0}\UPSTIcompetence[2]{B2-07}
-\index{Compétence B2-07}
+\setcounter{question}{0}\marginnote{\xpComp{SLCI}{03}}%\UPSTIcompetence{B2-07}
+\index{Compétence B2-07}\index{Compétence SLCI-03}\index{Compétence SLCI-03}
 \index{Schéma-blocs}
 \index{Prothèse}
 \ifcorrection
@@ -39,26 +39,23 @@ qui a permis de valider la pertinence d'une telle prothèse active.
 
 %\end{minipage} \hfill
 %\begin{minipage}[c]{.2\linewidth}
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[height=2cm]{images/ccmp_01}
 
 %\textit{Prothèse passive}
-%\end{center}
+%\end{marginfigure}
 %\end{minipage} \hfill
 %\begin{minipage}[c]{.2\linewidth}
-\begin{center}
-\includegraphics[width=.5\linewidth]{ccmp_05}
-
-%\textit{Prothèse active}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{ccmp_05}
+\caption{Prothèse active}
+\end{marginfigure}
 %\end{minipage} 
 
 
 
 %\noindent\begin{minipage}[c]{.65\linewidth}
-L'actionneur de la prothèse est un moteur à courant
-continu alimenté par une batterie rechargeable de 16
-Volts. L'énergie mécanique est transmise par un
+L'actionneur de la prothèse est un moteur à courant continu alimenté par une batterie rechargeable de \SI{16}{V}. L'énergie mécanique est transmise par un
 réducteur de type poulies-courroie suivi d'un
 système vis-écrou qui adapte cette énergie
 mécanique pour la prothèse (ensemble de liaisons
@@ -83,17 +80,17 @@ exercé par l'actionneur.
 %\end{itemize}
 %\end{minipage} \hfill
 %\begin{minipage}[c]{.3\linewidth}
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[width=\linewidth]{images/ccmp_05}
 %\textit{Prothèse passive}
-%\end{center}
+%\end{marginfigure}
 %\end{minipage}
 
 
 On peut modéliser la chaîne d'énergie de la façon suivante : 
-\begin{center}
+\begin{figure}[!h]
 \includegraphics[width=\linewidth]{ccmp_07}
-\end{center}
+\end{figure}
 
 Les grandeurs temporelles sont les suivantes :
 \begin{itemize}
@@ -126,9 +123,9 @@ domaine symbolique.
 %
 %Le vérin électrique est mis en mouvement par l'intermédiaire d'un moteur électrique à courant continu. Le mouvement de rotation du moteur est adapté par l'intermédiaire d'un système poulies-courroie suivi d'un système vis-écrou. On note $\omega_M$ la vitesse angulaire du rotor du moteur par rapport au stator.
 %
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[width=\linewidth]{images/ccmp_08}
-%\end{center}
+%\end{marginfigure}
 %
 %Le système vis-écrou est équipé d'une vis à billes de pas à droite $p_v$ avec $p_v=\SI{3}{mm.tour^{-1}}$. Le réducteur poulie-courroie possède un rapport de réduction $k=\dfrac{1}{2,1}$. On note $R_T$ le rapport entre la vitesse angulaire du rotor du moteur $\omega_M$ et la vitesse angulaire $\dfrac{\dd \alpha}{\dd t}$ tel que $\dfrac{\dd \alpha}{\dd t}=R_T\omega_M$.
 %
@@ -160,7 +157,7 @@ Le moteur électrique est régi par les équations électriques et de couplage �
 %Les constantes intervenant dans ces équations sont définies dans le tableau suivant.
 %
 %
-%\begin{center}
+%\begin{marginfigure}
 %\begin{tabular}{|p{.45\linewidth}|p{.45\linewidth}|}
 %\hline
 %Tension maximale $u_{\text{max}} =\SI{16}{V}$ & Résistance $R=\SI{1}{\Omega}$ \\ \hline
@@ -169,11 +166,11 @@ Le moteur électrique est régi par les équations électriques et de couplage �
 %Couple maximal (pic) $C_{\text{max}}=\SI{2,5}{Nm}$ & Constante de fcem $k_e=k_c=\SI{0,02}{Vs}$ \\ \hline
 %Courant sans charge : \SI{0,07}{A}  & Inertie du rotor $J_M=\SI{1,34e-5}{kg.m^2}$ \\ \hline
 %\end{tabular}
-%\end{center}
+%\end{marginfigure}
 
-%\begin{center}
-%\includegraphics[width=.9\linewidth]{images/ccmp_06}
-%\end{center}
+%\begin{marginfigure}
+%\includegraphics[width=\linewidth]{images/ccmp_06}
+%\end{marginfigure}
 \fi
 
 \question{À partir des équations caractérisant le système, déterminer les expressions littérales des fonctions
@@ -257,11 +254,11 @@ $= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{R
 %des courbes expérimentales.
 %\end{minipage} \hfill
 %\begin{minipage}[c]{.4\linewidth}
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[width=\linewidth]{images/ccmp_03}
 %
 %\textit{Montage expérimental : pied et tibia (manchon) bloqués}
-%\end{center}
+%\end{marginfigure}
 %\end{minipage} 
 %
 %
@@ -311,11 +308,11 @@ $= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{R
 %\else
 %\fi
 %
-%\begin{center}
+%\begin{marginfigure}
 %\includegraphics[width=\linewidth]{ccmp_09}
 %
 %%\textit{Schéma-blocs de l'asservissement en couple simplifié}
-%\end{center}
+%\end{marginfigure}
 
 \subsection*{Analyse des performances de l'asservissement en couple}
 \ifprof
@@ -328,11 +325,11 @@ $a_0=\SI{2,9}{NmV^{-1}}$,
 $a_1=\dfrac{26}{4356}\SI{}{s}$ et $a_2=\dfrac{1}{4356}\SI{}{s^2}$ et $H_{\text{cor}}( p)=H_c (p)K_{\text{amp}}K_A$.
 %\end{minipage} \hfill
 %\begin{minipage}[c]{.4\linewidth}
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{ccmp_04}
 
 %\textit{Schéma-blocs de l'asservissement en couple simplifié}
-\end{center}
+\end{marginfigure}
 %\end{minipage} 
 
 
@@ -343,10 +340,10 @@ rappelé ci-après.
 \end{obj}
 
 \begin{center}
-\begin{tabular}{|p{5.5cm}|l|}
+\begin{tabular}{p{8cm}l}
 \hline
-Critères & Valeur \\ \hline\hline
-Rapidité (temps de réponse à 5\%) & $t_{r5\%}<\SI{0,1}{s}$ \\ \hline
+Critères & Valeur \\ \hline
+Rapidité (temps de réponse à 5\%) & $t_{r5\%}<\SI{0,1}{s}$ \\ 
 %Stabilité (marge de phase) & $M_{\varphi}=45\degres$  \\ \hline
 Précision pour une entrée en échelon
 (écart normalisé par la valeur de l'échelon) & 10 \% maxi \\
@@ -390,10 +387,10 @@ Précision pour une entrée en échelon
 
 \ifprof
 \else
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{ccmp_10}
 %\textit{Schéma-blocs de l'asservissement en couple simplifié}
-\end{center}
+\end{marginfigure}
 \fi
 
 \ifprof
@@ -414,18 +411,16 @@ Précision pour une entrée en échelon
 
 \ifcolle
 \else
-\noindent
-\begin{tabular}{|p{.95\linewidth}|}
-\hline
+\marginnote{
+\begin{solution}
 \begin{enumerate}
 \item  $H_1(p)=\dfrac{k_c}{R}$, $H_2(p)=R_T$,  $H_3(p) = \dfrac{R_T^2}{J_M p  + \mu_m }$ et   $H_6(p)={k_c}$.
 \item $\text{FTBF}(p)= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{RS}d_0^2}k_{RS}d_0^2 $.
 \item .
-\end{enumerate} \\
-\hline
-\end{tabular}
+\end{enumerate} 
+\end{solution}}
 \fi
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{B2:07:77}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{B2:07:77}.}
+
 \fi
