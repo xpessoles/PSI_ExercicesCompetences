@@ -486,8 +486,8 @@ def make_full_pdf(chemins,dico_comp):
     os.chdir("../scripts")
 
 
-chemins = ["../SYS","../CHS","../CIN"]
-
+#chemins = ["../SYS","../CHS","../CIN"]
+chemins = ["../CIN/CIN-03-Transmetteurs"]
 make_full_pdf(chemins,dico_comp)
 
 
