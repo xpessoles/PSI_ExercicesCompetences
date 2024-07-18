@@ -4,9 +4,9 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{Pompe à piston axial  $\star$ \label{C2:06:11}}
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-06}
-\index{Compétence C2-06}
+\exer{Pompe à piston axial  $\star$ \label{GEO:03:C2:06:11}}
+\setcounter{question}{0}\marginnote{\xpComp{GEO}{03}}%\UPSTIcompetence[2]{C2-06}
+\index{Compétence C2-06}\index{Compétence GEO-03}
 \index{Pompe à pistons radiaux}
 \index{Arbre à cames}
 \ifcorrection
@@ -18,17 +18,17 @@
 \else
 Soit le mécanisme suivant. On a $\vect{AB}=e\vect{i_1}$ et $\vect{BI}=R\vect{j_0}$ et $\vect{AC}=\lambda(t)\vect{j_0}$. De plus, 
 $e=\SI{10}{mm}$ et $R=\SI{20}{mm}$. Le contact entre \textbf{1} et \textbf{2} en $B$ est maintenu en permanence par un ressort suffisamment raide (non représenté) positionné entre \textbf{0} et \textbf{2}. 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{11_01}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Tracer le graphe des liaisons.}
 
 \ifprof
-\begin{center}
-\includegraphics[width=.3\linewidth]{11_01_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{11_01_c}
+\end{marginfigure}
 
 \else
 \fi
@@ -112,37 +112,31 @@ plot_debit()
 \end{lstlisting}
 \noindent\hrule
 
-\begin{center}
-\includegraphics[width=.5\linewidth]{11_02_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{11_02_c}
+\end{marginfigure}
 
 \else
 \fi
-
-
-
 
 \ifprof
 \else
 \footnotesize
 \ifcolle
 \else
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
-Indications :
+\marginnote{
+\begin{solution}
 \begin{enumerate}
 \item .
 \item $ e\sin\theta +R - \lambda(t)=0$.
 \item $\lambdap (t)=e\thetap(t) \cos\theta (t) $.
 \item $q(t)=eS\thetap(t) \cos\theta (t)$.
 \item .
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
+\end{enumerate} 
+\end{solution}}
 \fi
 \normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:06:11}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{GEO:03:C2:06:11}.}
+
 \fi

@@ -1,11 +1,11 @@
 \normaltrue \difficilefalse \tdifficilefalse
 \correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
-\newcommand{\UPSTIidClasse}{12}
+%\newcommand{\UPSTIidClasse}{12}
 
-\exer{Pompe à piston radial  $\star$ \label{C2:06:10}}
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-06}
-\index{Compétence C2-06}
+\exer{Pompe à piston radial  $\star$ \label{GEO:03:C2:06:10}}
+\setcounter{question}{0}\marginnote{\xpComp{GEO}{03}}%\UPSTIcompetence[2]{C2-06}
+\index{Compétence C2-06}\index{Compétence GEO-03}
 \index{Pompe à palettes}
 \ifcorrection
 \else
@@ -15,18 +15,18 @@
 \ifprof
 \else
 Soit le mécanisme suivant. On a $\vect{AO}=e\vect{i_0}$ et $\vect{AB}=\lambda(t)\vect{i_1}$. De plus $e=\SI{10}{mm}$ et $R=\SI{20}{mm}$. Le contact entre \textbf{0} et \textbf{2} en $B$ est maintenu en permanence (notamment par effet centrifuge lors de la rotation de la pompe).
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{10_01}
-\end{center}
+\end{marginfigure}
 \fi
 
 
 \question{Tracer le graphe des liaisons.}
 
 \ifprof
-\begin{center}
-\includegraphics[width=.3\linewidth]{10_01_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{10_01_c}
+\end{marginfigure}
 \else
 \fi
 
@@ -78,9 +78,9 @@ $  =e\cos\theta(t)\pm \sqrt{e^2\cos^2\theta(t)-e^2+R^2}$
 \ifprof
 On garde la solution positive et obtient la courbe suivante.
 
-\begin{center}
-\includegraphics[width=.5\linewidth]{10_02_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{10_02_c}
+\end{marginfigure}
 
 \else
 \fi
@@ -95,9 +95,9 @@ $ \dot{\lambda}_{+}(t)= -e\dot{\theta}(t)\sin\theta(t)+  \dfrac{1}{2}\left( e^2\
 $= -e\dot{\theta}(t)\sin\theta(t)-  \dfrac{ e^2\dot{\theta}(t)\cos\theta(t)\sin\theta(t)}{ \sqrt{e^2\cos^2\theta(t)-e^2+R^2}}$.
 
  \textbf{À revoir}
-\begin{center}
-\includegraphics[width=.5\linewidth]{10_03_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{10_03_c}
+\end{marginfigure}
 
 \else
 \fi
@@ -118,9 +118,9 @@ Le débit instantané de la pompe est donné par $q(t)=S\dot{\lambda}(t)$.
 
 
 \ifprof
-\begin{center}
-\includegraphics[width=.5\linewidth]{10_04_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{10_04_c}
+\end{marginfigure}
 \else
 \fi
 
@@ -186,21 +186,19 @@ def plot_debit5p():
     #plt.savefig("10_05_c.pdf")
 \end{lstlisting}
 
-\begin{center}
-\includegraphics[width=.5\linewidth]{10_05_c}
-\end{center}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{10_05_c}
+\end{marginfigure}
 \else
 \fi
 
 
 \ifprof
 \else
-\footnotesize
 \ifcolle
 \else
-\begin{center}
-\begin{tabular}{|p{.9\linewidth}|}
-\hline
+\marginnote{
+\begin{solution}
 Indications (à vérifier...):
 \begin{enumerate}
 \item .
@@ -208,12 +206,11 @@ Indications (à vérifier...):
 \item .
 \item $q(t)=S\dot{\lambda}(t)$.
 \item .
-\end{enumerate} \\ \hline
-\end{tabular}
-\end{center}
+\end{enumerate} 
+\end{solution}}
 \fi
-\normalsize
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:06:10}.}
-\end{flushright}%
+
+
+\marginnote{Corrigé voir \ref{GEO:03:C2:06:10}.}
+
 \fi
