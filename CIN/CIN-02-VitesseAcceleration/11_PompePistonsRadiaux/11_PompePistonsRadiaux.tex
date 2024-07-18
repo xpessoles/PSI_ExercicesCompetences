@@ -1,0 +1,62 @@
+\normaltrue \difficilefalse \tdifficilefalse
+\correctiontrue
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{12}
+
+\exer{Pompe à piston axial $\star$ \label{CIN:02:B2:13:11}}
+\setcounter{question}{0}\marginnote{\xpComp{CIN}{02}}%\UPSTIcompetence[2]{B2-13}
+\index{Compétence B2-13}\index{Compétence CIN-02}
+\index{Pompe à piston axial}
+\index{Arbre à cames}
+\ifcorrection
+\else
+\marginnote{\textbf{Pas de corrigé pour cet exercice.}}
+\fi
+
+\ifprof
+\else
+Soit le mécanisme suivant. On a $\vect{AB}=e\vect{i_1}$ et $\vect{BI}=R\vect{j_0}$. De plus, 
+$e=\SI{10}{mm}$ et $R=\SI{20}{mm}$. Le contact entre \textbf{1} et \textbf{2} en $B$ est maintenu en permanence par un ressort suffisamment raide (non représenté) positionné entre \textbf{0} et \textbf{2}. 
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{11_01}
+\end{marginfigure}
+\fi
+
+Il est possible de mettre la loi entrée-sortie sous la forme $ \lambda(t) = e\sin\theta +R $
+ou encore $\lambdap (t)=e\thetap(t) \cos\theta (t)$  (voir exercice \ref{C2:06:11}).
+
+
+\question{Donner le torseur cinématique $\torseurcin{V}{2}{0}$ au point $C$.}
+\ifprof
+$\torseurcin{V}{2}{0} = \torseurl{\vect{0}}{\lambdap (t)\vj{0}}{C}$.
+\else
+\fi
+
+\question{Déterminer $\vectg{C}{2}{0}$.}
+\ifprof
+$\vectg{C}{2}{0} = \lambdapp (t)\vj{0}$.
+\else
+\fi
+
+\ifprof
+\else
+\footnotesize
+\ifcolle
+\else
+\begin{marginfigure}
+\begin{tabular}{|p{.9\linewidth}|}
+\hline
+Indications :
+\begin{enumerate}
+\item $\torseurcin{V}{2}{0} = \torseurl{\vect{0}}{\lambdap (t)\vj{0}}{C}$.
+\item $\vectg{C}{2}{0} = \lambdapp (t)\vj{0}$.
+\end{enumerate} \\ \hline
+\end{tabular}
+\end{marginfigure}
+\fi
+\normalsize
+\begin{flushright}
+\footnotesize{Corrigé  voir \ref{CIN:02:B2:13:11}.}
+\end{flushright}%
+\fi
