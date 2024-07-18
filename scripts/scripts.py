@@ -461,17 +461,17 @@ def make_full_pdf(chemins,dico_comp):
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
 
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
-    chap_ordre = ["COR"]
+    chap_ordre = ["SLCI"]
     #,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
         fid.write("\chapter{"+dico_comp[chap]+"} \n")
         for comp in dico_comp :
-
+            # print(chap,comp)
             if (chap in comp) and ("-" in comp) :
                 fid.write("\\section{"+dico_comp[comp]+"} \n")
                 for file in tex_liste :
-                    #print(chap,comp,file['comp'])
+                    # print(chap,comp,file['comp'])
                     if comp in file['comp'] :
                         #print(file)
                         #print(file['full_chemin'])
@@ -486,8 +486,8 @@ def make_full_pdf(chemins,dico_comp):
     # os.chdir("../scripts")
 
 
-#chemins = ["../SYS","../CHS","../CIN"]
-chemins = ["../COR"]
+chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR"]
+chemins = ["../SLCI"]
 make_full_pdf(chemins,dico_comp)
 
 
