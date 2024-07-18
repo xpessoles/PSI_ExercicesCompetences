@@ -487,7 +487,7 @@ def make_full_pdf(chemins,dico_comp):
 
 
 #chemins = ["../SYS","../CHS","../CIN"]
-chemins = ["../CIN/CIN-03-Transmetteurs"]
+chemins = ["../COR"]
 make_full_pdf(chemins,dico_comp)
 
 

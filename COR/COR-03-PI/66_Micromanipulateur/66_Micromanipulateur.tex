@@ -3,10 +3,10 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Micromanipulateur $\star$ \label{C2:04:66}}
+\exer{Micromanipulateur $\star$ \label{COR:03::66}}
 % CCP PSI 2009
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-04}
-\index{Compétence C2-04}
+\setcounter{question}{0}\marginnote{\xpComp{COR}{03}}%\UPSTIcompetence[2]{C2-04}
+\index{Compétence C2-04}\index{Compétence COR-03}
 \index{Correcteur}
 \index{Correcteur proportionnel intégral}
 \index{Micromanipulateur}
@@ -22,9 +22,9 @@
 \else
 Pour élever la température à c\oe{}ur du moteur, on alimente en tension tous les bobinages du moteur par l'intermédiaure d'un comparateur et d'un amplificateur. Cet ensemble élabore une tension, dépendant de la teion de consigne $u_c(t)$, provenant d'un dispositif non étudié ici, et de la tension $u_m(t)$ fournie par un capteur de température situé dans le stator du moteur. 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{66_01}
-\end{center}
+\end{marginfigure}
 
 
 L'ensemble \{Moteur + enceinte \} est modélisé par un premier ordre de fonction de transfert $H(p)=\dfrac{H_0}{1+\tau p}$
@@ -36,9 +36,9 @@ L'amplificateur est modélisé par un gain pur $A= \SI{400}{W.V^{-1}}$
 
 Le cahier des charges est le suivant. 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{66_02}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Expliquez en quelques lignes pourquoi le retard engendé par le capteur risque de rendre le système non conforme au cahier des charges.}
@@ -51,9 +51,9 @@ Le cahier des charges est le suivant.
 \else 
 Pour supprimer l'inflience du retard, on choisit d'unsatller un correcteur en série juste avant l'amplificateur, comme indiqué sur le schéma-blocs suivant. 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{66_03}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Déterminer l'expression littérale de la fonction de transfert en boucle fermée du système ainsi corrigé en fonction de $H(p)$, $A$, $C(p)$, $C_1(p)$, $\beta$ et $T_r$.}
@@ -69,9 +69,9 @@ Pour supprimer l'inflience du retard, on choisit d'unsatller un correcteur en s�
 \ifprof
 \else 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{66_04}
-\end{center}
+\end{marginfigure}
 
 Grâce au correcteur $C(p)$ choisi précédemment, le retard n'a plus d'influence sur la commande du système. 
 
@@ -116,7 +116,7 @@ On choisit comme fonction de transfert de la seconde partie du ocrrecteur $C(p)=
 \end{enumerate}}}
 \normalsize
 
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:04:66}.}
-\end{flushright}%
+
+\marginnote{Corrigé voir \ref{COR:03::66}.}
+
 \fi

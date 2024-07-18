@@ -3,10 +3,13 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Système éclipse $\star$ \label{C2:04:65:02}}
+\exer{Système éclipse $\star$ \label{COR:04:C2:04:65:02}}
 % Banque PT SI A 2009
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-04}
+\setcounter{question}{0}
+\marginnote{\xpComp{COR}{°4}}
+%\UPSTIcompetence[2]{C2-04}
 \index{Compétence C2-04}
+\index{Compétence COR-04}
 \index{Correcteur}
 \index{Correcteur avance de phase}
 \index{Système éclipse}
@@ -22,9 +25,9 @@
 Le schéma-blocs sous la forme suivante avec un gain unitaire pour le capteur
 de vitesse.
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{65_01}
-\end{center}
+\end{marginfigure}
 
 $H_L(p)=\dfrac{K_L}{1+\tau_L p}$ et $H_G(p)=\dfrac{K_G}{1+\tau_G p}$  avec $\tau_G=\tau_L = \SI{20}{ms}$, $K_L = \SI{1e-3}{N^{-1}s^{-1}}$ et $K_G = \SI{2e-5}{mN^{-1}s^{-1}}$.
 
@@ -54,9 +57,9 @@ La figure suivante fournit les diagrammes de Bode du système corrigé uniquemen
 $C_{V1}(p)$ avec $K_V=1$, c'est-à-dire la fonction de transfert $W(p) =\dfrac{1}{p^2}H_L(p)$.
 
 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{65_02}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{Lire sur les diagrammes de Bode du système de fonction de transfert $W(p)$, la valeur de la
@@ -96,9 +99,9 @@ Valider alors les performances attendues en terme de stabilité.}
 
 \ifprof
 \else 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{65_03}
-\end{center}
+\end{marginfigure}
 \fi
 
 \question{On donne le tracé de la réponse temporelle à un échelon de vitesse de $\SI{10}{mm.s^{-1}}$
@@ -111,9 +114,9 @@ charges ? }
 
 \ifprof
 \else 
-\begin{center}
+\begin{marginfigure}
 \includegraphics[width=\linewidth]{65_04}
-\end{center}
+\end{marginfigure}
 \fi
 
 
@@ -123,25 +126,7 @@ provoquées par le système de maintien en tension ?}
 \else 
 \fi
 
-
-
-
 \ifprof
 \else
-
-\noindent\footnotesize
-% \fbox{\parbox{.9\linewidth}{
-% Éléments de corrigé : 
-% \begin{enumerate}
-  % \item $\varepsilon_{\text{con \%}} = \dfrac{1}{1+K_PK_m K_{\text{pom}} K_{\text{cap}} }$;
-  % \item $K_P > 19$;
-  % \item $\varepsilon_{\text{pert}} = \Delta Q_e \dfrac{K_f}{1+K_{\text{cap}}K_PK_mK_{\text{pom}}}$;
-  % \item $K_P > 2,19$.
-  % \item $K_P < 0,125$. Il est impossible de vérifier les trois conditions avec un correcteur proportionnel.
-% \end{enumerate}}}
-\normalsize
-
-\begin{flushright}
-\footnotesize{Corrigé  voir \ref{C2:04:65:02}.}
-\end{flushright}%
+\marginnote{Corrigé voir \ref{COR:04:C2:04:65:02}.}
 \fi
