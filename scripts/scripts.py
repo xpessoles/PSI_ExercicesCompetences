@@ -106,6 +106,16 @@ dico_comp={
     "RDM-03" : "Dimensionner une pièce en torsion",
     "RDM-04" : "Dimensionner une pièce en flexion",
     "RDM-05" : "Déterminer les déformations d'une pièce",
+    "ELEC" : "Dimensionnement des moteurs électriques et de leur commmande",
+    "ELEC-01" : "Modélisation des circuits électriques en régime continu",
+    "ELEC-02" : "Modélisation des circuits électriques en régime sinusoïdal",
+    "ELEC-03" : "Dimensionnement des préactionneurs",
+    "ELEC-04" : "Dimensionnement des moteurs à courant continu",
+    "ELEC-05" : "Dimensionnement des moteurs alternatifs",
+    "PPM" : "Concevoir et fabriquer des produits",
+    "PPM-01" : "Concevoir et représenter des produits",
+    "PPM-02" : "Choisir des matériaux",
+    "PPM-03" : "Choisir des procédés d'obtention des produits",
 }
 
 # On fait la liste des .tex d'un dossier.
@@ -429,7 +439,7 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
         fid.write('  - '+comp+"\n")
         fid.write('---\n')
 
-        fid.write('[comment]: <> (Généré automatiquement par make_all_activitess.py, creation_fichiers_activites)\n\n')
+        fid.write('[comment]: <> (Généré automatiquement par make_all_activites.py, creation_fichiers_activites)\n\n')
 
 
         fid.write("##"+titre_comp +" \n")
@@ -467,15 +477,17 @@ def make_full_pdf(chemins,dico_comp):
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
 
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ",
-                    "NUM","RDM"]
+                    "NUM","RDM","ELEC","PPM"]
 
-    #,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
+    chap_ordre = ["PPM"]
+
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
         fid.write("\chapter{"+dico_comp[chap]+"} \n")
         for comp in dico_comp :
             # print(chap,comp)
             if (chap in comp) and ("-" in comp) :
+
                 fid.write("\\section{"+dico_comp[comp]+"} \n")
                 for file in tex_liste :
                     # print(chap,comp,file['comp'])
@@ -485,7 +497,8 @@ def make_full_pdf(chemins,dico_comp):
                         chemin_image = file['chemin']+"/images/"
                         fid.write("\\graphicspath{{\\repStyle/png/}{"+chemin_image+"}} \n")
                         fid.write("\\input{"+file['full_chemin']+"} \n \n")
-
+                fid.write("\\clearpage \n")
+                fid.write("\\newpage \n")
     fid.close()
     # os.chdir("../FULL_PDF")
     # os.system("pdflatex --shell-escape FULL_PDF_ExercicesCompetences.tex")
@@ -493,8 +506,8 @@ def make_full_pdf(chemins,dico_comp):
     # os.chdir("../scripts")
 
 
-chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC"]
-#chemins = ["../RDM"]
+chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC","../ELEC","../PPM"]
+chemins = ["../PPM"]
 make_full_pdf(chemins,dico_comp)
 
 
