@@ -479,7 +479,7 @@ def make_full_pdf(chemins,dico_comp):
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ",
                     "NUM","RDM","ELEC","PPM"]
 
-    chap_ordre = ["PPM"]
+    chap_ordre = ["NUM"]
 
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
@@ -507,7 +507,7 @@ def make_full_pdf(chemins,dico_comp):
 
 
 chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC","../ELEC","../PPM"]
-chemins = ["../PPM"]
+
 make_full_pdf(chemins,dico_comp)
 
 
