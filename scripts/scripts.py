@@ -100,13 +100,12 @@ dico_comp={
     "NUM-03" : "Résolution d'une équation différentielle",
     "NUM-04" : "Résoudre un problème numériquement",
     "NUM-05" : "Résoudre un problème en utilisant l'apprentissage automatisé",
-    "RDM	" : "Dimensionner une pièce mécanique en résistance des matériaux",
+    "RDM" : "Dimensionner une pièce mécanique en résistance des matériaux",
     "RDM-01" : "Déterminer un torseur de cohésion, tracer les diagrammes des efforts",
     "RDM-02" : "Dimensionner une pièce en traction ou compression",
     "RDM-03" : "Dimensionner une pièce en torsion",
     "RDM-04" : "Dimensionner une pièce en flexion",
     "RDM-05" : "Déterminer les déformations d'une pièce",
-
 }
 
 # On fait la liste des .tex d'un dossier.
@@ -467,8 +466,9 @@ def make_full_pdf(chemins,dico_comp):
 
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
 
-    chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
-    chap_ordre = ["PERF"]
+    chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ",
+                    "NUM","RDM"]
+
     #,"GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ","NUM"]
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
@@ -493,8 +493,8 @@ def make_full_pdf(chemins,dico_comp):
     # os.chdir("../scripts")
 
 
-chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF"]
-chemins = ["../RDM"]
+chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC"]
+#chemins = ["../RDM"]
 make_full_pdf(chemins,dico_comp)
 
 

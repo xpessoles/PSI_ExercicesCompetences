@@ -5,8 +5,8 @@
 %\newcommand{\UPSTIidClasse}{12}
 
 \exer{Banc d'essai de Boite de Transfert Principale d'hélicoptère$\star$ \label{C2:10:Coh:530}}
-\setcounter{question}{0}\UPSTIcompetence[2]{C2-10}
-\index{Compétence C2-10}
+\setcounter{question}{0}\marginnote{\xpComp{RDM}{01}}%\UPSTIcompetence[2]{C2-10}
+\index{Compétence C2-10}\index{Compétence RDM-01}
 \index{Torseur de cohésion}
 \index{Diagramme des efforts intérieurs}
 
@@ -35,16 +35,16 @@ Dans le cadre d’un essai de la BTP, les pales ne sont pas utilisées. Il est d
 
  
 \begin{marginfigure}
-\includegraphics[width=.75\linewidth]{530_01}
+\includegraphics[width=\linewidth]{530_01}
 
-\textit{Vue 3D de la BTP et du banc d’essai (système de mise en effort non représenté)}
+\caption{Vue 3D de la BTP et du banc d’essai (système de mise en effort non représenté)}
 \end{marginfigure}
 
 
 \begin{marginfigure}
-\includegraphics[width=.75\linewidth]{530_02}
+\includegraphics[width=\linewidth]{530_02}
 
-\textit{Schéma d’architecture de la sortie de la BTP}
+\caption{Schéma d’architecture de la sortie de la BTP}
 \end{marginfigure}
 
 
@@ -78,9 +78,9 @@ La modélisation retenue pour déterminer le diamètre de l’arbre est la suiva
 \end{itemize} 
 
 \begin{marginfigure}
-\includegraphics[width=.75\linewidth]{530_03}
+\includegraphics[width=\linewidth]{530_03}
 
-\textit{Modélisation des efforts sur l’arbre de sortie de la BTP}
+\caption{Modélisation des efforts sur l’arbre de sortie de la BTP}
 \end{marginfigure}
 
 \question{Exprimer le torseur de cohésion en chaque section de la poutre.  À quel(s) type(s) de sollicitation(s) l’arbre est-il soumis ?}
@@ -108,8 +108,8 @@ On note :
 
 La condition de résistance en torsion peut éventuellement s'écrire $\tau_{\text{max}}< \dfrac{K R_e}{ s}$.
 
-\begin{marginfigure}
-\begin{tabular}{p{2cm}lp{1.5cm}}
+\begin{center}
+\begin{tabular}{lll}
 \hline
 Famille de matériaux & Pourcentage de carbone & K \\ \hline \hline
 Aciers & Inférieur à 0,2 \%	&0,5 \\ \hline
@@ -118,7 +118,7 @@ Aciers & Inférieur à 0,2 \%	&0,5 \\ \hline
 &Entre 0,45 \% et 1,7 \%	&0,8 \\ \hline
 Fonte&Supérieur à 1,7 \%	&Entre 0,77 et 1 \\ \hline
 \end{tabular}
-\end{marginfigure}
+\end{center}
 
 
 \question{On recommande un coefficient de sécurité $s=1,2$. À partir des données précédentes, exprimer de manière littérale quel doit être le diamètre minimum de l’arbre.}
@@ -143,9 +143,9 @@ Fonte&Supérieur à 1,7 \%	&Entre 0,77 et 1 \\ \hline
 \fi
 
 
-\begin{marginfigure}
+\begin{center}
 \includegraphics[width=\linewidth]{530_04}
-\end{marginfigure}
+\end{center}
 
 
 \ifprof
