@@ -43,8 +43,8 @@
 %%	BOOK INFORMATION
 %%----------------------------------------------------------------------------------------
 
-\titlehead{Document Template}
-\title[SII en PSI* - Xavier Pessoles]{SII en PSI* - Xavier Pessoles}
+%\titlehead{Document Template}
+\title[SII en PSI*]{SII en PSI* -- Exercices d'application}
 \author[XP]{Xavier Pessoles}
 \date{\today}
 %\publishers{An Awesome Publisher}
@@ -52,7 +52,11 @@
 %----------------------------------------------------------------------------------------
 %
 \frontmatter % Denotes the start of the pre-document content, uses roman numerals
+\maketitle
 
+\begingroup % Local scope for the following commands
+\tableofcontents
+\endgroup
 
 %%----------------------------------------------------------------------------------------
 %%	MAIN BODY
@@ -82,7 +86,7 @@
 %%%%%
 \setcounter{cptApplication}{1}
 \setcounter{cptTD}{1}
-\newcommand{\exer}{\section*}
+\newcommand{\exer}{\subsection*}
 \newcommand{\td}{}
 
 \input{all_tex}
