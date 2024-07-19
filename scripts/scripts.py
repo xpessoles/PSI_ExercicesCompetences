@@ -508,12 +508,14 @@ def make_full_pdf(chemins,dico_comp):
 
 chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC","../ELEC","../PPM","../SEQ"]
 
-make_full_pdf(chemins,dico_comp)
+
+# Réaliser Un seul PDF Avec tous les fichiers
+## make_full_pdf(chemins,dico_comp)
 
 
 
 tex_liste = make_tex_list(chemins)
-#make_all_pdf()
+make_all_pdf()
 #
 # tex_liste = make_tex_list(chemins)
 # #save_liste_tex(tex_liste,PC)
