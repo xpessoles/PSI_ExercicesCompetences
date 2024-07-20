@@ -183,12 +183,18 @@ def make_dico_from_tex_file(root, file):
     "chemin":root,
     "fichier":file,
     "type":['exo_comp'],
-    "depot":'PSU_ExercicesCompetences',
+    "depot":'PSI_ExercicesCompetences',
     'chemin_git':'https://github.com/xpessoles/PSI_ExercicesCompetences/tree/main/'+root[27:]
     }
 
     comp = root.split("/")[-2]
-    comp = comp.split("_")[0]
+    comp = comp.split("-")[:2]
+    if len(comp) == 2 :
+        comp = comp[0]+"-"+comp[1]
+    else :
+        comp = comp[0]
+
+
     dico["comp"]=comp
     #print(comp)
     #print(root)
@@ -239,7 +245,7 @@ def verif(root,file):
 def compte_activite(comp,tex_liste):
     cpt = 0
     for d in tex_liste :
-        if d['comp'] == comp.replace('-','_') :
+        if d['comp'] == comp :
             cpt = cpt+1
     return cpt
 
@@ -387,27 +393,30 @@ def make_all_pdf():
 def make_nav(dico):
     # RENVOIE LA LISTE DES CHAPITRE
     # On crée la nav du site
-    chap = []
-    for d in dico :
-        c = d['comp'].replace('_','-')
-        if c not in chap :
-            chap.append(c)
+    # chap = []
+    # for d in dico :
+    #     c = d['comp'].replace('_','-')
+    #     if c not in chap :
+    #         chap.append(c)
+    #
+    #     # Vérif que les fichiers ont un chapitre
+    #     if d['comp'] == '':
+    #         print(d['fichier'])
+    #         print(d['chapitre'])
+    #
+    # """
+    # Création du fichier du paragraphe de nav à ajouter dans mkdocs.yml
+    # """
+    # chap.sort()
 
-        # Vérif que les fichiers ont un chapitre
-        if d['comp'] == '':
-            print(d['fichier'])
-            print(d['chapitre'])
-
-    """
-    Création du fichier du paragraphe de nav à ajouter dans mkdocs.yml
-    """
-    chap.sort()
+    chap = ['SYS', 'SYS-01', 'SYS-02', 'SYS-03', 'SYS-04', 'SYS-05', 'SYS-06', 'GEO', 'GEO-01', 'GEO-02', 'GEO-03', 'GEO-04', 'CIN', 'CIN-01', 'CIN-02', 'CIN-03', 'CIN-04', 'CIN-05', 'STAT', 'STAT-01', 'STAT-02', 'STAT-03', 'STAT-04', 'STAT-05', 'CHS', 'CHS-01', 'CHS-02', 'CHS-03', 'CHS-04', 'CHS-05', 'DYN', 'DYN-01', 'DYN-02', 'DYN-03', 'DYN-04', 'DYN-05', 'DYN-06', 'TEC', 'TEC-01', 'TEC-02', 'TEC-03', 'TEC-04', 'TEC-05', 'SLCI', 'SLCI-01', 'SLCI-02', 'SLCI-03', 'SLCI-04', 'SLCI-05', 'SLCI-06', 'SLCI-07', 'SLCI-08', 'SLCI-09', 'SLCI-10', 'SLCI-11', 'PERF', 'PERF-01', 'PERF-02', 'PERF-03', 'PERF-04', 'PERF-05', 'PERF-06', 'COR', 'COR-01', 'COR-02', 'COR-03', 'COR-04', 'COR-05', 'COR-06', 'NL', 'NL-01', 'NL-02', 'SEQ', 'SEQ-01', 'SEQ-02', 'SEQ-03', 'NUM', 'NUM-01', 'NUM-02', 'NUM-03', 'NUM-04', 'NUM-05', 'RDM', 'RDM-01', 'RDM-02', 'RDM-03', 'RDM-04', 'RDM-05', 'ELEC', 'ELEC-01', 'ELEC-02', 'ELEC-03', 'ELEC-04', 'ELEC-05', 'PPM', 'PPM-01', 'PPM-02', 'PPM-03']
 
     fid = open("nav_activites.yml","w",encoding = 'utf8')
     fid.write('- Activités SII: \n')
     fid.write('    - activites/index.md \n')
 
     for c in chap:
+        print(c,compte_activite(c,tex_liste))
         ## On ne met que les comp ou il y a des exos
         if compte_activite(c,tex_liste)>0 :
             fid.write('    - '+c+' : activites/'+c+'.md\n')
@@ -509,16 +518,17 @@ def make_full_pdf(chemins,dico_comp):
 chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC","../ELEC","../PPM","../SEQ"]
 
 
-# Réaliser Un seul PDF Avec tous les fichiers
-## make_full_pdf(chemins,dico_comp)
+## Réaliser Un seul PDF Avec tous les fichiers
+# make_full_pdf(chemins,dico_comp)
 
+
+##Réaliser un PDF par fichier
+#tex_liste = make_tex_list(chemins)
+#make_all_pdf()
 
 
 tex_liste = make_tex_list(chemins)
-make_all_pdf()
-#
-# tex_liste = make_tex_list(chemins)
-# #save_liste_tex(tex_liste,PC)
+#save_liste_tex(tex_liste,PC)
 # nav = make_nav(tex_liste)
 #
 # creation_fichiers_activites(nav,tex_liste)
