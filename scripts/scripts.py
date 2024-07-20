@@ -390,6 +390,24 @@ def make_all_pdf():
             #pass
             compile_file(d)
 
+def make_all_pdf_comp(comp):
+    # Réaliser tous les pdf d'une seule compétence
+    # Création de tous les PDF
+    tex_liste = make_tex_list(chemins)
+
+
+    for d in tex_liste :
+        liste_pdf = make_pdf_list(['../PDF'])
+        f_pdf_1 = d['comp']+"_"+d['fichier'][:-4]+'_Sujet.pdf'
+        f_pdf_2 = d['comp']+"_"+d['fichier'][:-4]+'_Corrige.pdf'
+        #print(f_pdf_1,f_pdf_2)
+        #return f_pdf,liste_pdf
+        if (f_pdf_1 not in liste_pdf) and (f_pdf_2 not in liste_pdf) :
+            #pass
+            if comp in d["comp"] :
+                print('a')
+                print(d)
+                compile_file(d)
 
 def make_nav(dico):
     # RENVOIE LA LISTE DES CHAPITRE
@@ -481,7 +499,7 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
 def make_full_pdf(chemins,dico_comp):
     # Créér le fichier tex avec toutes les activités
     # Compiler les sujets
-    # TODO : ajouter les corrigés
+
     tex_liste = make_tex_list(chemins)
 
     fid = codecs.open("../FULL_PDF/all_tex.tex","w","utf-8")
@@ -516,6 +534,15 @@ def make_full_pdf(chemins,dico_comp):
 
 
 chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../GEO","../RDM","../SLCI","../STAT","../TEC","../ELEC","../PPM","../SEQ"]
+
+#
+tex_liste = make_tex_list(chemins)
+# for d in tex_liste :
+#     if "SLCI" in d['comp'] :
+#         print(d['sujet'])
+
+
+#make_all_pdf_comp("PPM")
 
 
 ## Réaliser Un seul PDF Avec tous les fichiers
