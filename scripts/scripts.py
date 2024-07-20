@@ -432,7 +432,7 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
     """
     Création de fichiers correspondants aux activités
     """
-    print("Creation d'un fichier md par compétence.")
+        print("Creation d'un fichier md par compétence.")
 
     for comp in chap_comp :
         fid = open("C:\\GitHub\\xpessoles.github.io\\docs\\activites\\"+comp+".md","w",encoding = 'utf8')
@@ -529,11 +529,11 @@ chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../G
 
 tex_liste = make_tex_list(chemins)
 #save_liste_tex(tex_liste,PC)
-# nav = make_nav(tex_liste)
+nav = make_nav(tex_liste)
 #
-# creation_fichiers_activites(nav,tex_liste)
-#
-#
+creation_fichiers_activites(nav,tex_liste)
+
+
 # for k,v in dico_comp.items():
 #     cc = compte_activite(k,tex_liste)
 #     if cc>0 :
