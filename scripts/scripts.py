@@ -212,12 +212,15 @@ def make_dico_from_tex_file(root, file):
     #fid = open(fich,'r', encoding="utf8")
     #line = fid.readline()
     #fid.close()
-    dico['raw_sujet']="https://xpessoles-cpge.fr/pdf/"+dico['comp']+"_"+dico['fichier'][:-4]+'_Sujet.pdf'
-    dico['raw_corrige']="https://xpessoles-cpge.fr/pdf/"+dico['comp']+"_"+dico['fichier'][:-4]+'_Corrige.pdf'
 
-    dico['blob_sujet']="https://xpessoles-cpge.fr/pdf/"+dico['comp']+"_"+dico['fichier'][:-4]+'_Sujet.pdf'
-    dico['blob_corrige']="https://xpessoles-cpge.fr/pdf/"+dico['comp']+"_"+dico['fichier'][:-4]+'_Corrige.pdf'
-    #print(dico)
+    dico['sujet'] = dico['comp']+"_"+dico['fichier'][:-4]+'_Sujet.pdf'
+    dico['corrige'] = dico['comp']+"_"+dico['fichier'][:-4]+'_Corrige.pdf'
+
+    dico['lien_sujet']="https://xpessoles-cpge.fr/pdf/"+dico['sujet']
+    dico['lien_corrige']="https://xpessoles-cpge.fr/pdf/"+dico['corrige']
+
+
+
     return dico
 
 def verif(root,file):
@@ -254,8 +257,7 @@ def compile_file(dict):
 
     # Compilation du sujet
     # On copie la base
-    dest = dict["fichier"] # fichier.tex
-    dest = dict['comp']+"_"+dest[:-4]+"_Sujet.tex"
+    dest = dict['sujet'][:-4]+'.tex'
     shutil.copy("base.tex",dest)
     print("==================================")
     print(dest)
@@ -273,11 +275,11 @@ def compile_file(dict):
     os.system("pdflatex --shell-escape "+dest)
     os.system("pdflatex --shell-escape "+dest)
 
-    src = dest[:-4]+".pdf"
+    src = dest = dict['sujet']
     dest = "../PDF/"+src
     # On stocke
     shutil.copy(src,dest)
-    # On efface tout les fichiers de compil
+    # On efface tous les fichiers de compil
     src = src[:-4]
     for root, dirs, files in os.walk("."):
         for file in files:
@@ -292,8 +294,7 @@ def compile_file(dict):
     #################################
     # Compilation du corrigé
     # On copie la base
-    dest = dict["fichier"] # fichier.tex
-    dest = dict['comp']+"_"+dest[:-4]+"_Corrige.tex"
+    dest = dict['corrige'][:-4]+'.tex'
     shutil.copy("base.tex",dest)
     print("==================================")
     print(dest)
@@ -312,7 +313,7 @@ def compile_file(dict):
     os.system("pdflatex --shell-escape "+dest)
     os.system("pdflatex --shell-escape "+dest)
 
-    src = dest[:-4]+".pdf"
+    src = dict['corrige']
     dest = "../PDF/"+src
     # On stocke
     shutil.copy(src,dest)
@@ -416,7 +417,7 @@ def make_nav(dico):
     fid.write('    - activites/index.md \n')
 
     for c in chap:
-        print(c,compte_activite(c,tex_liste))
+        #print(c,compte_activite(c,tex_liste))
         ## On ne met que les comp ou il y a des exos
         if compte_activite(c,tex_liste)>0 :
             fid.write('    - '+c+' : activites/'+c+'.md\n')
@@ -432,7 +433,7 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
     """
     Création de fichiers correspondants aux activités
     """
-        print("Creation d'un fichier md par compétence.")
+    print("Creation d'un fichier md par compétence.")
 
     for comp in chap_comp :
         fid = open("C:\\GitHub\\xpessoles.github.io\\docs\\activites\\"+comp+".md","w",encoding = 'utf8')
@@ -464,11 +465,11 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
         fid.write("| :-------------- | :---: | :-----: | :------: | \n")
         for act in liste_act :
             fid.write("| "+act['fichier'][:-4]+ " | ")
-            fid.write("[:fontawesome-solid-file-pdf:]("+act['blob_sujet']+") | ")
+            fid.write("[:fontawesome-solid-file-pdf:]("+act['lien_sujet']+") | ")
             if act['corrige'] :
-                fid.write("[:fontawesome-solid-file-pdf:]("+act['blob_corrige']+") |")
+                fid.write("[:fontawesome-solid-file-pdf:]("+act['lien_corrige']+") |")
             else:
-                fid.write("[:fontawesome-regular-file-pdf:]("+act['blob_corrige']+") | ")
+                fid.write("[:fontawesome-regular-file-pdf:]("+act['lien_corrige']+") | ")
 
 
             fid.write("[:material-github:]("+act['chemin_git']+") |  \n")
@@ -488,7 +489,6 @@ def make_full_pdf(chemins,dico_comp):
     chap_ordre = ["SYS","GEO","CIN","STAT","CHS","DYN","TEC","SLCI","PERF","COR","NL","SEQ",
                     "NUM","RDM","ELEC","PPM"]
 
-    print(len(chap_ordre))
 
     for chap in chap_ordre :
         fid.write("\\setchapterpreamble[u]{\\margintoc} \n")
@@ -523,17 +523,17 @@ chemins = ["../SYS","../CIN","../CHS","../DYN","../TEC","../COR","../PERF","../G
 
 
 ##Réaliser un PDF par fichier
-#tex_liste = make_tex_list(chemins)
-#make_all_pdf()
+# tex_liste = make_tex_list(chemins)
+# make_all_pdf()
 
-
-tex_liste = make_tex_list(chemins)
-#save_liste_tex(tex_liste,PC)
-nav = make_nav(tex_liste)
 #
-creation_fichiers_activites(nav,tex_liste)
-
-
+# tex_liste = make_tex_list(chemins)
+# save_liste_tex(tex_liste,PC)
+# nav = make_nav(tex_liste)
+# # #
+# creation_fichiers_activites(nav,tex_liste)
+#
+#
 # for k,v in dico_comp.items():
 #     cc = compte_activite(k,tex_liste)
 #     if cc>0 :
