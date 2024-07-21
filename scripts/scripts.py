@@ -467,7 +467,7 @@ def creation_fichiers_activites(chap_comp,liste_dico_act):
         fid.write('  - '+comp+"\n")
         fid.write('---\n')
 
-        fid.write('[comment]: <> (Généré automatiquement par make_all_activites.py, creation_fichiers_activites)\n\n')
+        fid.write('[comment]: <> (Généré automatiquement par PSI_ExercicesCompetences/scripts.py, creation_fichiers_activites)\n\n')
 
 
         fid.write("##"+titre_comp +" \n")
