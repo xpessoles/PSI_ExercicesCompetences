@@ -1,0 +1,122 @@
+\normalfalse \difficiletrue \tdifficilefalse
+\correctiontrue
+
+%\UPSTIidClasse{11} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{11}
+
+\exer{Chasse-neige $\star\star$ \label{C1:05:95}}
+\setcounter{question}{0}\marginnote{\xpComp{STAT}{03}}%\UPSTIcompetence{C1-05}
+\index{Compétence C1-05}\index{Compétence STAT-03}
+\index{PFS}
+\index{Chasse-neige}
+\ifcorrection
+\else
+\marginnote{\textbf{Pas de corrigé pour cet exercice.}}
+\fi
+
+\ifprof
+\else
+
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{95_01}
+\end{marginfigure}
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{95_02}
+\end{marginfigure}
+L’étrave de déneigement, objet de cette étude, est utilisée pour dégager les routes. Elle est composée de deux volets disposés en « V » qui permettent d’évacuer sur les côtés une épaisseur importante de neige. Les deux volets sont articulés de façon indépendante sur la pointe de l’étrave et ont une ouverture variable contrôlée par le conducteur à travers un vérin d’ouverture. En fin d’utilisation ou pour éviter des obstacles, elle est pourvue d’un système de relevage hydraulique.
+
+La pièce 7 est la lame de déneigement articulée par
+rapport au châssis 3. Elle est mise en mouvement
+par le vérin \{10 ; 11\}.
+
+Hypothèsses : 
+\begin{itemize}
+\item liaisons parfaites (pas de jeu, pas de frottement);
+\item le poids de toutes les pièces est négligé, sauf celui de la pièce 7, $m_7=\SI{850}{kg}$ appliqué en $G$;
+\item l’action de la neige sur le volet 7 est modélisée par un glisseur de moment nul en $Q$ tel que :
+$\torseurstat{T}{\text{neige}}{7} =  \torseurl{Q\vx{7}}{\vect{0}}{Q}$ avec $Q = \SI{15000}{N}$;
+\item le vérin d’ouverture choisi supporte une pression d'alimentation de 150 bars.
+\end{itemize}
+
+\fi
+
+\question{Tracer le graphe de structure.}
+\question{Proposer une démarche permettant de déterminer la section du vérin permettant de « chasser la neige ». }
+
+
+
+\ifprof
+\begin{corrige}
+\paragraph*{Graphe de liaisons}
+
+On commence par faire les figures planes puis le graphe de liaisons.
+\begin{enumerate}
+\item On cherche les solides ou les ensembles de solides soumis à 2 glisseurs . Le problème étant plan, les pivots dont l'axe est perpendiculaire au plan sont des glisseurs. \{10+11\} est un ensemble soumis à 2 glisseurs.
+\item On isole ensuite 7 et on rélise un théorème du moment statique en $H$ suivant $\vy{3}$.
+\end{enumerate}
+
+\begin{center}
+\includegraphics[width=\linewidth]{cor_01}
+\end{center}
+
+\paragraph*{On isole le vérin \{10+11\}}
+D'après le PFS, l'ensmble étant soumis à 2 glisseurs, on a donc $\torseurstat{T}{11}{7} = \torseurl{F\vz{11}}{\vect{0}}{J}$.
+
+\paragraph*{On isole \{7\}}
+BAME : 
+\begin{itemize}
+\item action de la neige;
+\item action de la pesanteur;
+\item action de la pièce 11;
+\item action de la pièce 3;
+\end{itemize}
+
+\paragraph*{On réalise le TMS en $H$ en projection sur $\vy{3}$.}
+
+$$
+\vectm{H}{\text{neige}}{7} \cdot \vy{3} + \vectm{H}{\text{Pesanteur}}{7} \cdot \vy{3} + \vectm{H}{11}{7} \cdot \vy{3} + \underbrace{\vectm{H}{3}{7} \cdot \vy{3}}_{\vect{0}} =0
+$$
+
+$
+\Rightarrow
+\left(\vect{HQ}\wedge Q\vect{x_7} \right) \cdot \vy{3} 
++ \left(\vect{HG}\wedge -gP\vect{y_3} \right) \cdot \vy{3} 
++ \left(\vect{HJ}\wedge F\vect{z_{11}} \right)  \cdot \vy{3}=0
+$
+
+$
+\Rightarrow
+\left(\left(a\vx{3}+b\vy{3}+c\vz{3}\right)\wedge Q\vect{x_7} \right) \cdot \vy{3} 
++ \underbrace{\left( i\vz{7}\wedge -gP\vect{y_3} \right) \cdot \vy{3}}_{\vect{0}}
++ \left(h\vz{7}\wedge F\vect{z_{11}} \right)  \cdot \vy{3}=0
+$
+
+$
+\Rightarrow
+\left(\vy{3} \wedge \left(a\vx{3}+c\vz{3}\right)  \right) \cdot   Q\vect{x_7}
++ \left(h\vz{7}\wedge F\vect{z_{11}} \right)  \cdot \vy{3}=0
+$
+$
+\Rightarrow
+\left( -a\vz{3}+c\vx{3}\right)   \cdot   Q\vect{x_7}
++ hF \sin\left(\beta - \gamma\right)\vy{3}  \cdot \vy{3}=0
+$
+$
+\Rightarrow
+Q\left( a\sin \gamma+c\cos\gamma \right)  
++ hF \sin\left(\beta - \gamma\right)=0
+$
+
+Au final, $F= - \dfrac{Q\left( a\sin \gamma+c\cos\gamma \right)  }{ h \sin\left(\beta - \gamma\right)}$.
+
+$F$ étant l'effort déployé par le vérin, et $S$ sa section, on a alors, $F=pS$ et 
+$S= - \dfrac{Q\left( a\sin \gamma+c\cos\gamma \right)  }{p h \sin\left(\beta - \gamma\right)}$.
+
+\end{corrige}
+\else
+\fi
+
+\ifprof
+\else
+\marginnote{Corrigé voir \ref{C1:05:95}.}
+\fi
