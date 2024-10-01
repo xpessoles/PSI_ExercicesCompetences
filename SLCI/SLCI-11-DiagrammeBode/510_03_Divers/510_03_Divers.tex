@@ -68,7 +68,7 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 
 
 \begin{figure}[!h]
- \begin{tikzpicture}[xscale=2]
+ \begin{tikzpicture}[xscale=3]
 \tikzset{
 semilog lines/.style={thin, bleuxp}, 
 semilog lines 2/.style={semilog lines,bleuxpc},
@@ -77,6 +77,7 @@ semilog label x/.style={semilog lines,below,font=\tiny,black},
 semilog label y/.style={semilog lines,right,font=\tiny,black}
 }
 \begin{scope}[yscale=1/60]
+\OrdBode{20}
 \semilog{-4}{-1}{-40}{120}
 
 \end{scope}
