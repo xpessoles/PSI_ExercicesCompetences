@@ -18,6 +18,11 @@
 
 On s'intéresse à la conception d'un banc d'essai de boite de transfert principale d'hélicoptère. 
 
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{530_01}
+
+\caption{Vue 3D de la BTP et du banc d’essai (système de mise en effort non représenté)}
+\end{marginfigure}
 
 
 \begin{obj}
@@ -31,16 +36,6 @@ On s'intéresse à la conception d'un banc d'essai de boite de transfert princip
 \ifprof
 \else
 
-Dans le cadre d’un essai de la BTP, les pales ne sont pas utilisées. Il est donc nécessaire de concevoir un arbre de sortie qui doit faire office de rotor principal. Cet arbre de sortie devra supporter des efforts équivalents à ceux engendrés par les efforts aérodynamiques. L’accouplement avec le reste du banc d’essai doit permettre de fournir un couple résistant. Par ailleurs, des vérins permettent de générer l’effort de portance. Une modélisation de l’arbre de sortie de la BTP est présentée sur la figure suivante.
-
- 
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{530_01}
-
-\caption{Vue 3D de la BTP et du banc d’essai (système de mise en effort non représenté)}
-\end{marginfigure}
-
-
 \begin{marginfigure}
 \includegraphics[width=\linewidth]{530_02}
 
@@ -48,7 +43,7 @@ Dans le cadre d’un essai de la BTP, les pales ne sont pas utilisées. Il est d
 \end{marginfigure}
 
 
-
+Dans le cadre d’un essai de la BTP, les pales ne sont pas utilisées. Il est donc nécessaire de concevoir un arbre de sortie qui doit faire office de rotor principal. Cet arbre de sortie devra supporter des efforts équivalents à ceux engendrés par les efforts aérodynamiques. L’accouplement avec le reste du banc d’essai doit permettre de fournir un couple résistant. Par ailleurs, des vérins permettent de générer l’effort de portance. Une modélisation de l’arbre de sortie de la BTP est présentée sur la figure suivante.
  
 
 On considère un essai dans lequel l’arbre \textbf{1} est sollicité par un effort généré par le vérin V1. On fait les hypothèses suivantes :
@@ -58,6 +53,8 @@ On considère un essai dans lequel l’arbre \textbf{1} est sollicité par un ef
 \item on considère que les liaisons en $A$ et $B$ sont parfaites, l’accouplement permet donc de transmettre le couple fourni par la BTP ;
 \item la pesanteur est négligée.
 \end{itemize}
+
+
 On a :
 \begin{itemize}
 \item $\vect{AB}=l\vect{z}$ avec $l=\SI{200}{mm}$;
@@ -111,11 +108,11 @@ La condition de résistance en torsion peut éventuellement s'écrire $\tau_{\te
 \begin{center}
 \begin{tabular}{lll}
 \hline
-Famille de matériaux & Pourcentage de carbone & K \\ \hline \hline
-Aciers & Inférieur à 0,2 \%	&0,5 \\ \hline
-&Entre 0,2 \% et 0,32 \%	&0,6 \\ \hline
-&Entre 0,32 \% et 0,45 \%	&0,7 \\ \hline
-&Entre 0,45 \% et 1,7 \%	&0,8 \\ \hline
+Famille de matériaux & Pourcentage de carbone & K \\ \hline 
+Aciers & Inférieur à 0,2 \%	&0,5 \\ 
+&Entre 0,2 \% et 0,32 \%	&0,6 \\ 
+&Entre 0,32 \% et 0,45 \%	&0,7 \\ 
+&Entre 0,45 \% et 1,7 \%	&0,8 \\ 
 Fonte&Supérieur à 1,7 \%	&Entre 0,77 et 1 \\ \hline
 \end{tabular}
 \end{center}

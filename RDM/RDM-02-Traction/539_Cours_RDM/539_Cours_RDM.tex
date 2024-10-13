@@ -1,0 +1,65 @@
+\normaltrue
+\correctionfalse
+
+%\UPSTIidClasse{12} % 11 sup, 12 spé
+%\newcommand{\UPSTIidClasse}{12}
+
+\exer{Question de cours -- Traction $\star$ \label{RDM:02:trac:539:cours}}
+\setcounter{question}{0}\marginnote{\xpComp{RDM}{02}}%\UPSTIcompetence[2]{C2-10}
+\index{Compétence RDM-02}
+
+
+
+\ifcorrection
+\else
+\marginnote{\textbf{Pas de corrigé pour cet exercice.}}
+\fi
+
+
+\question{Donner la définition de la contrainte en traction, la loi de Hooke et exprimer l'allongement. }
+\ifprof
+$\sigma = \dfrac{N}{S}$, $\sigma = E\varepsilon_x$, $\varepsilon = \dfrac{\Delta L}{L_0} = \dfrac{N}{ES}$.
+\else
+\fi
+
+\question{Tracer le champ de contrainte en tranction pour une poutre de section circulaire et pour une poutre creuse de section circulaire. }
+\ifprof
+\else
+\fi
+
+\question{Donner l'allongement maximal à la la limite de la rupture d'un hauban en acier de diamètre \SI{50}{mm} et de longueur \SI{10}{m}. Donner aussi l'effort maximal dans le câble. Vous donnerez des ordres de grandeur des caractéristiques de l'acier.}
+\ifprof
+On prend $\indice{\sigma}{max} = \SI{1000}{Mpa}$ et $E = \SI{200000}{MPa}$.
+On a alors $\indice{\sigma}{max} = E \dfrac{\Delta L}{L_0}$ et $\Delta L =  \indice{\sigma}{max} \dfrac{L_0}{E}$.
+
+On a alors $\Delta L =  1000 \dfrac{10}{200000} = \SI{0,05}{m} = \SI{5}{cm}$.
+
+Par ailleurs : $\indice{\sigma}{max} = \dfrac{\indice{F}{max}}{S}$ et $\indice{F}{max} = 1000 \times \dfrac{\pi \times 50^2}{4} \simeq \SI{2 000 000}{N}$ (200 tonnes).
+
+\else
+\fi
+
+\question{En assimilant le câble à une tige métallique, quelle serait sa diminution de diamètre ?}
+\ifprof
+On a $\varepsilon_x = \dfrac{\Delta L}{L} = \dfrac{0,05}{10}$.
+
+Par ailleurs, $\nu = -\dfrac{\varepsilon_y}{\varepsilon_x}$ et $\varepsilon_y = - 0,3 \times  0,005$.
+
+Enfin, $\varepsilon_y = \dfrac{\Delta D}{D_0}$ et $\Delta D = -D  \times 0,3 \times  0,005=\SI{0,075}{mm}$.
+\else
+\fi
+
+
+\ifprof
+
+\else
+%\footnotesize
+%\begin{enumerate}
+%  \item $\left(fp + Mp^2\right) Z(p)=S_h P_h(p)-S_e P_e(p) - \dfrac{Mg}{p}$
+%    \item $Q_e(p)=\left(S_a - S_b \right)pL(p) + \dfrac{V_t}{B_e} p P_e(p)$ et $mp^2 L(p) = -rL(p)+\left(S_a-S_b\right) P_e(t)-f'pL(p)$.
+%\end{enumerate}
+%\normalsize
+
+\marginnote{Corrigé voir \ref{RDM:02:trac:539:cours}.}
+
+\fi
