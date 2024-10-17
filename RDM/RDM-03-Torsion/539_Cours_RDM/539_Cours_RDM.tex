@@ -17,13 +17,19 @@
 
 
 \question{Donner la définition de la contrainte en torsion, la relation entre la contrainte et déformation, et la relation entre effort et déformation. }
+
 \ifprof
-$\tau = \dfrac{M_t}{I_G}r$, $\tau = G r \gamma_x$, $M_t= G \gamma_x I_G$ et $\Delta \theta_x = \Gamma_x L$.
+$\tau = \dfrac{M_t}{I_G}r$, $\tau = G r \gamma_x$, $M_t= G \gamma_x I_G$ et $\Delta \theta_x = \gamma_x L$.
 \else
 \fi
 
 \question{Donner la défintion du moment quadratique polaire. Calculer $I_G(S)$ pour une poutre creuse de section circulaire (grand rayon $R$ et petit rayon $r$).}
+
 \ifprof
+On a $\int_G(S)=\int_S r^2 \dd S$.
+
+Pour un cylindre plein : on a $I_G(S)=\dfrac{\pi D^4}{32} = \dfrac{\pi R^4}{2}$.
+Pour une poutre creuse : $I_G(S) = \dfrac{\pi \left(R^4 -r^4\right) }{2} $.
 \else
 \fi
 
@@ -44,7 +50,18 @@ Soit la barre de torsion ci-contre encastrée en $O$. On a $\vectm{P}{\text{ext}
 \fi
 
 \question{Déteminer l'angle de torsion entre le poit $O$ et le point $P$.}
+
 \ifprof
+L'angle unitaire de torsion est donné par $\gamma_x = \dfrac{M_t }{GI_G}$ avec $G=\dfrac{E}{2(1+\nu)}$.
+
+AN : 
+$E = \SI{200 000}{MPa}$ et $\nu = 1$, alors $G = \SI{77 0000}{MPa}$
+$I_{G_p} = \dfrac{\pi 5^4}{2} = \SI{981}{mm^4}$ 
+
+$\gamma_x = \dfrac{M_t }{I_G G} = \dfrac{10 000}{77 000\times 981} = 1,3 \times {-4}\si{rad}$
+
+
+
 \else
 \fi
 
