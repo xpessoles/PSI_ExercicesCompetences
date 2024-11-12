@@ -26,12 +26,18 @@ Le graphe de liaisons est donné figure suivante.
 \includegraphics[width=7cm]{71_01_Cor}
 \end{center}
 
-\marginnote{Si la pince est en position serrée, il n'y a pas de mobilité utile. }
+\marginnote{Si la pince est en position serrée, il n'y a pas de mobilité << utile >>. }
 \begin{itemize}
-\item \textbf{Dans le plan}, on a $m=1$ : mobilité correspondant au serrage de la pièce et rotation de 6 autour de l'axe $\axe{Q}{z_p}$.
-\item $I_c = 6\times 1 + 1 \times 1 + 1 \times 3 = 10$ (6 pivots, 1 glissière et 1 ponctuelle dans le plan);
+\item \textbf{Dans le plan}, on a $m=1$ : rotation de 6 autour de l'axe $\axe{Q}{z_p}$.
+\item $I_c = 6\times 1 + 1 \times 1 + 1 \times 2 = 9$ (6 pivots, 1 glissière et 1 ponctuelle dans le plan);
 \item $E_c = 3 \times 3 = 9$
-\item $h=m-I_c+E_c = 1-10+9 = 0$. 
+\item $h=m-I_c+E_c = 1-9+9 = 1$. 
+\end{itemize}
+\begin{itemize}
+\item \textbf{Dans l'espace}, on a $m=2$ : rotations de 6 autour de l'axe $\axe{Q}{z_p}$ et $\axe{Q}{y_p}$.
+\item $I_c = 6\times 1 + 1 \times 1 + 1 \times 5 = 12$ (6 pivots, 1 glissière et 1 ponctuelle );
+\item $E_c = 6 \times 3 = 18$
+\item $h=2-I_c+E_c = 1-12+18 = 7$. 
 \end{itemize}
 \else
 \fi
