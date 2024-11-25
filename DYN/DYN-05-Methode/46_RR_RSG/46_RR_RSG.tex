@@ -4,15 +4,15 @@
 %\UPSTIidClasse{12} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{Mouvement RT -- RSG  $\star\star$ \label{C1:05:46}}
+\exer{Mouvement RR -- RSG  $\star\star$ \label{C1:05:46}}
 \setcounter{question}{0}\marginnote{\xpComp{DYN}{05}}%\UPSTIcompetence{B2-14}
-\UPSTIcompetence[2]{C1-05}
+%\UPSTIcompetence[2]{C1-05}
 \index{Compétence B2-14}
 \index{Compétence C1-05}
 \index{Principe fondamental de la dynamique}
 \index{PFD}
 \index{Mécanisme 2 rotations et RSG}
-\index{Culbuto}
+\index{Segway}
 \ifcorrection
 \else
 \marginnote{\textbf{Pas de corrigé pour cet exercice.}}
@@ -52,9 +52,11 @@ Un moteur exerce un couple entre les pièces 1 et 2.
 \begin{itemize}
 \item liaison pivot en $A$ telle que $\vectm{A}{1}{2}\cdot \vect{k_0} = \vect{0}$;
 \item pesanteur en $B$ : $\torseurstat{T}{\text{pes}}{2} = \torseurl{-m_2 g \vect{j_0}}{\vect{0}}{B}$;
-\item cople moteur : $\torseurstat{T}{1_m}{2} = \torseurl{\vect{0}}{C_m\vect{k_0}}{\forall P}$.
+\item couple moteur : $\torseurstat{T}{1_m}{2} = \torseurl{\vect{0}}{C_m\vect{k_0}}{\forall P}$.
 \end{itemize}
-\item On applique le théorème du moment dynamique en $A$ en projection sur $\vect{k_0}$.
+\item On applique le théorème du moment dynamique en $A$ en projection sur $\vect{k_0}$ :
+$\vectmd{A}{2}{0}\cdot \vk{0} = 0 + \left(\vect{AG_2}\wedge -m_2 g \vect{j_0}\right)\cdot \vk{0} + C_m$. 
+
 \end{itemize}
 \item Deuxième équation : 
 \begin{itemize}
@@ -63,13 +65,13 @@ Un moteur exerce un couple entre les pièces 1 et 2.
 \begin{itemize}
 \item liaison ponctuelle avec RSG en $I$ telle que $\vectm{I}{0}{1}\cdot \vect{k_0} = \vect{0}$; 
 \item pesanteur en $G_1$  : $\torseurstat{T}{\text{pes}}{1} = \torseurl{-m_1 g \vect{j_0}}{\vect{0}}{G_1}$;
-\item cople moteur : $\torseurstat{T}{2}{1_m} = \torseurl{\vect{0}}{-C_m\vect{k_0}}{\forall P}$.
+\item pesanteur en $G_2$  : $\torseurstat{T}{\text{pes}}{2} = \torseurl{-m_2 g \vect{j_0}}{\vect{0}}{G_2}$.
 \end{itemize}
-\item On applique le théorème du moment dynamique en $I$ en projection sur $\vect{k_0}$.
-\item Remarque : on ne modélise pas la résistance au roulement. 
+\item On applique le théorème du moment dynamique en $I$ en projection sur $\vect{k_0}$ :
+$\vectmd{I}{1+2}{0}\cdot \vk{0} = 0 + \left(\vect{IG_2}\wedge -m_2 g \vect{j_0}\right)\cdot \vk{0} +\left(\vect{IG_1}\wedge -m_1 g \vect{j_0}\right)\cdot \vk{0} $. 
 \end{itemize}
-
 \end{itemize}
+\marginnote{Remarque : on ne modélise pas la résistance au roulement.}
 \else
 \fi
 
