@@ -4,7 +4,7 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
-\exer{Mouvement RT  $\star$ \label{C1:05:06:PFD}}
+\exer{Mouvement TR  $\star$ \label{C1:05:06:PFD}}
 \setcounter{question}{0}\marginnote{\xpComp{DYN}{05}}%\UPSTIcompetence{B2-14}
 %\UPSTIcompetence[2]{C1-05}
 \index{Compétence B2-14}
@@ -37,27 +37,39 @@ L'accélération de la pesanteur est donnée par $\vect{g}=-g\vect{j_0}$.
 \end{figure}
 \fi
 
+\ifprof
+\begin{marginfigure}
+\centering
+\includegraphics[width=\linewidth]{06_TR_01}
+\end{marginfigure}
+
+\else
+\fi
+
+
 \question{Réaliser le graphe d'analyse en faisant apparaître l'ensemble des actions mécaniques.}
 \ifprof
 \begin{figure}[!h]
-\includegraphics[width=\linewidth]{06_TR_02_Cor}
+\includegraphics[width=.7\linewidth]{06_TR_02_Cor}
 \end{figure}
 \else
 \fi
 
 \question{Proposer une démarche permettant de déterminer les loi de mouvement de \textbf{1} et de \textbf{2} par rapport à $\rep{0}$.}
 \ifprof
+
 Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et $\theta(t)$. Il est donc nécessaire d'écrire, dans le meilleur des cas, deux équations :
 \begin{itemize}
 \item une équation traduisant la mobilité de 2 par rapport à 1, soit TMD appliqué à 2 en $B$ en projection sur $\vk{0}$;
 \item une équation traduisant la mobilité de 2+1 par rapport à 0, soit TRD appliqué à 1+2 en projection sur $\vi{0}$.
 \end{itemize}
 
-\vspace{.5cm}
+
+
+Stratégie : 
 
 \begin{itemize}
 \item \textbf{On isole 2.}
-\end{itemize}
 
 \begin{itemize}
 \item \textbf{BAME :}
@@ -75,13 +87,12 @@ Ce mécanisme présente deux degrés de liberté indépendants : $\lambda(t)$ et
 \begin{itemize}
 \item \textbf{Théorème :} on applique le théorème du moment dynamique en $B$ au solide \textbf{2} en projection sur $\vk{0}$ : $C_{\text{mot}}+\vectm{B}{\text{pes}}{2}\cdot \vk{0}  = \vectmd{B}{2}{0}\cdot \vk{0}$.
 \item \textbf{Calcul de la composante dynamique :} considérons le cas où la matrice d'inertie est donnée en $C$. On a donc 
-$\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto{2}{0}}{\rep{0}}$. De plus, 
-$\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
+$\vectmd{C}{2}{0}= \deriv{\vectmc{C}{2}{0}}{\rep{0}}=\deriv{\inertie{C}{2}\vecto{2}{0}}{\rep{0}}$. Par suite, 
+$\babard{B}{C}{2}{0}$ avec $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 \end{itemize}
 
-\begin{itemize}
+
 \item \textbf{On isole 1+2.}
-\end{itemize}
 
 \begin{itemize}
 \item \textbf{BAME :}
@@ -89,7 +100,7 @@ $\babard{B}{C}{2}{0}$ et $\vectrd{2}{0}=m_2 \vectg{C}{2}{0}$.
 \item actions de la liaison glissière $\torseurstat{T}{0}{1}$;
 \item action de la pesanteur $\torseurstat{T}{\text{pes}}{1}$;
 \item action de la pesanteur $\torseurstat{T}{\text{pes}}{2}$;
-\item action du vérin $\torseurstat{T}{\text{ver}}{1}$;.
+\item action du vérin $\torseurstat{T}{\text{ver}}{1}$.
 \end{itemize}
 \end{itemize}
 
@@ -104,6 +115,8 @@ $\vectf{\text{ver}}{1}\cdot \vi{0}  = \vectrd{1+2}{0}\cdot \vi{0}$.
 \item \textbf{Calcul de la composante dynamique :} 
 $\vectrd{1+2}{0} = \vectrd{1}{0} +\vectrd{2}{0}$  $= m_1\vectg{G_1}{1}{0} +m_2 \vectg{G_2}{2}{0}$.
 \end{itemize}
+
+\end{itemize}
 \else
 \fi
 
@@ -112,6 +125,13 @@ $\vectrd{1+2}{0} = \vectrd{1}{0} +\vectrd{2}{0}$  $= m_1\vectg{G_1}{1}{0} +m_2 \
 \ifcolle
 \question{Mettre en \oe{}uvre cette démarche.}
 \ifprof
+
+On montre que \sidenote{\url{http://xpessoles-cpge.fr/pdf/DYN-04_06_TR_Corrige.pdf}} $\torseurdyn{2}{0}=\torseurl{%
+m_2\left(\ddot{\lambda}(t) \vect{i_0} + R \left(\ddot{\theta} \vj{2} - \dot{\theta}^2 \vi{2}\right)\right)
+}{%
+C_2  \ddot{\theta} \vk{1} + Rm_2\left( -\sin \theta \ddot{\lambda}(t) \vk{0} + R \ddot{\theta} \vk{2}\right)
+}{B}$ et $\vectrd{1+2}{0}\cdot \vect{i_0} =m_1\ddot{\lambda}(t)+m_2\left(\ddot{\lambda}(t)-R \left(\ddot{\theta} \sin\theta(t)  + \dot{\theta}^2 \cos\theta \right)\right) $.
+
 \else
 \fi
 \else
