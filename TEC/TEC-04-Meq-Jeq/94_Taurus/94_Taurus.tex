@@ -4,13 +4,13 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\subsection*{Taurus $\star$ \label{CIN:03:C2:06:94}}
+\subsection*{Taurus $\star$ \label{TEC:04:Jeq:94}}
 \marginnote{\textit{CCINP -- TSI -- 2022.}}
 %\marginnote{\UPSTIcompetence[2]{C2-06}}
-\marginnote{\xpComp{CIN}{03}}%\UPSTIcompetence[2]{A3-05}}
+\marginnote{\xpComp{TEC}{04}}
 \setcounter{question}{0}
 
-\index{Compétence C2-06}\index{Compétence CIN-03}
+
 \index{Taurus}
 
 \index{Train d'engrenages simple}
@@ -30,13 +30,14 @@ Pour déterminer le couple au démarrage, il est nécessaire de déterminer le m
  En fonctionnement normal, le schéma cinématique de l’installation retenue est donné figure \ref{fig_94_02}.
  
 
-\begin{figure}[!h]
-\includegraphics[width=\linewidth]{94_02}
-\caption{Schéma cinématique de la turbine à gaz sans démarreur \label{fig_94_02}}
-\end{figure}
 
 On donne dans le tableau \ref{tab_94_01} les différents moment d'inertie des éléments composants le système.
 
+
+\begin{figure}[!h]
+\includegraphics[width=.6\linewidth]{94_02}
+\caption{Schéma cinématique de la turbine à gaz sans démarreur \label{fig_94_02}}
+\end{figure}
 
 \begin{table}[!h]
 \begin{tabular}{ll}
@@ -84,7 +85,7 @@ On a $r = \dfrac{\omega_{s/0}}{\omega_{e/0}} = - \dfrac{Z_1 Z_2'}{Z_2 Z_3} $.
 \else
 \fi
 
-On considère l’ensemble $\Sigma =\{\text{Turbine}, \text{Compresseur}, \text{Réducteur}, \text{Générateur}\}$.
+\marginnote{On considère l’ensemble $\Sigma$=\{{Turbine}, {Compresseur}, {Réducteur}, {Générateur}\}.}
 
 \question{Déterminer l’énergie cinétique de $\Sigma$ par rapport au référentiel galiléen lié au bâti : $\ec{\Sigma}{0}$ en fonction de la vitesse de rotation $\omega_{e/0}$ et des différents moments d’inertie. En déduire l’expression de l’inertie équivalente $\indice{J}{eq}$ ramenée sur l’arbre d’entrée.
  Faire l’application numérique.}
@@ -104,7 +105,7 @@ Le rotor du moteur asynchrone de démarrage dont le moment d’inertie est $J_5=
  l’ensemble $\Sigma$ par l’intermédiaire du multiplicateur (figure \ref{fig_94_03}). Celui-ci possède un rapport de multiplication $k=6$ et un moment d’inertie négligeable.
  
  \begin{figure}[!h]
-\includegraphics[width=\linewidth]{94_03}
+\includegraphics[width=.8\linewidth]{94_03}
 \caption{Schéma cinématique de la turbine à gaz avec démarreur \label{fig_94_03}}
 \end{figure}
 
@@ -127,6 +128,6 @@ $=\dfrac{1}{2}\left(\indice{J}{eq} k^2 + J_5\right) \omega_{mas/0}^2$.
 \ifprof
 \else
 
-\marginnote{Corrigé voir \ref{CIN:03:C2:06:94}.}
+\marginnote{Corrigé voir \ref{TEC:04:Jeq:94}.}
 
 \fi
