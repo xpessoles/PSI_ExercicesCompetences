@@ -349,7 +349,8 @@ def load_liste_tex(machine) :
 def go(machine):
     # compilation UNIQUEMENT des fichiers modifiés
     old_tex_file = load_liste_tex(machine)
-    new_tex_file = make_tex_list(chemins,machine)
+    #new_tex_file = make_tex_list(chemins,machine)
+    new_tex_file = make_tex_list(chemins)
     i=0
     for d_new in new_tex_file :
         # On cherche si le fichier existe dans le fichier_sauvegarder
