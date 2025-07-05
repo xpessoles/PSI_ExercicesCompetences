@@ -339,6 +339,14 @@ L'objectif est de déterminer si la correction  $H_{\text{cor}}( p)$ permet de r
 rappelé ci-après.
 \end{obj}
 
+\ifprof
+\else
+\begin{marginfigure}
+\includegraphics[width=\linewidth]{ccmp_10}
+%\textit{Schéma-blocs de l'asservissement en couple simplifié}
+\end{marginfigure}
+\fi
+
 \begin{center}
 \begin{tabular}{p{8cm}l}
 \hline
@@ -385,13 +393,7 @@ Précision pour une entrée en échelon
 
 \question{À l'aide des courbes, valider l'ensemble des critères du cahier des charges en justifiant clairement vos réponses. }
 
-\ifprof
-\else
-\begin{marginfigure}
-\includegraphics[width=\linewidth]{ccmp_10}
-%\textit{Schéma-blocs de l'asservissement en couple simplifié}
-\end{marginfigure}
-\fi
+
 
 \ifprof
 \begin{corrige}
@@ -411,14 +413,17 @@ Précision pour une entrée en échelon
 
 \ifcolle
 \else
-\marginnote{
+%\marginnote{
 \begin{solution}
+\footnotesize
 \begin{enumerate}
 \item  $H_1(p)=\dfrac{k_c}{R}$, $H_2(p)=R_T$,  $H_3(p) = \dfrac{R_T^2}{J_M p  + \mu_m }$ et   $H_6(p)={k_c}$.
 \item $\text{FTBF}(p)= \dfrac{k_c R_T^3}{J_MR p^2  + p\left(\mu_m R  +k_ck_c R_T^2\right)+R_TR^2k_{RS}d_0^2}k_{RS}d_0^2 $.
 \item .
 \end{enumerate} 
-\end{solution}}
+\normalsize
+\end{solution}
+%}
 \fi
 
 \marginnote{Corrigé voir \ref{B2:07:77}.}
