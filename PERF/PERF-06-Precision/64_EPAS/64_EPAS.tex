@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctionfalse
+\correctiontrue
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -11,6 +11,7 @@
 \index{Précision}
 
 \ifcorrection
+\marginnote{\textbf{Corrigé à vérfier.}}
 \else
 \marginnote{\textbf{Pas de corrigé pour cet exercice.}}
 \fi
@@ -57,10 +58,23 @@ $=\dfrac{3,24e^{-0,2 p}}{p\left(p+3,24\right)+3,24e^{-0,2 p}}$.
 \else 
 \fi
 
-Le système est soumis à une rampe de \SI{0,1}{rad.s^{-1}}.
+
  
-\question{Donner la valeur de l’erreur de traînage correspondant à cette entrée, en
-négligeant le retard.}
+\question{Donner la valeur de l'écart statique du système avec retard.}
+\ifprof
+
+On a $\lim\limits_{t\to +\infty} \varepsilon(t) $
+$= \lim\limits_{p\to 0} p\varepsilon(p) $
+$= \lim\limits_{p\to 0} p\left( \Theta_C(p) - \Theta_S(p) \right) $
+$= \lim\limits_{p\to 0} p\left( \dfrac{1}{p}-\dfrac{1}{p} G_r(p) \right) $
+$= \lim\limits_{p\to 0}  1-\dfrac{3,24e^{-0,2 p}}{p\left(p+3,24\right)+3,24e^{-0,2 p}} $
+$= \lim\limits_{p\to 0}  \dfrac{p\left(p+3,24\right)}{p\left(p+3,24\right)+3,24e^{-0,2 p}} $ $=0$.
+
+\else 
+\fi
+ 
+Le système est soumis à une rampe de \SI{0,1}{rad.s^{-1}}.
+\question{Donner la valeur de l’erreur de traînage correspondant à cette entrée.}
 \ifprof
 
 On a $\lim\limits_{t\to +\infty} \varepsilon(t) $
@@ -74,17 +88,13 @@ $= \lim\limits_{p\to 0}  0,1\dfrac{\left(p+3,24\right)}{p\left(p+3,24\right)+3,2
 $=  0,1 $
 \else 
 \fi
- 
-\question{Donner la valeur de l'écart statique du système avec retard.}
-\ifprof
-\else 
-\fi
- 
-\question{Donner la valeur de l'erreur de traînage du système avec retard.}
-\ifprof
-\else 
-\fi
 
+ 
+%\question{Donner la valeur de l'erreur de traînage du système avec retard.}
+%\ifprof
+%\else 
+%\fi
+%
 \ifprof
 \else
 
