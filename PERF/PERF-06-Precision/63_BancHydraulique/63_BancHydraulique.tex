@@ -22,20 +22,20 @@ Pour limiter l’erreur statique due aux fuites, on envisage d’asservir la pre
 %L’objectif est ici de proposer un réglage du correcteur pour répondre aux critères du cahier des charges.
 La pression d’eau à l’intérieur du tube est mesurée par un capteur de pression. 
 
-\begin{marginfigure}
+\begin{figure}[!h]
 \includegraphics[width=\linewidth]{63_01}
-\end{marginfigure}
+\end{figure}
 
  
- \begin{tabular}{ll}
+\marginnote{
+ \begin{tabular}{lp{3cm}}
 $P_{\text{con}}(p)$ : & 	pression de consigne d’eau dans le tube (Pa) \\
 $P_e(p)$ : & 	pression d’eau dans le tube (Pa) \\
 $U_c(p)$ : & 	tension de commande du régulateur de pression (V)\\
 $P_r(p)$ : &	pression d’huile régulée (Pa)\\
 $\Delta Q_e(p)$ :& 	débit de fuite (\si{m^3s^{-1}})\\
 $U_m(p)$ 	:&	tension de mesure du capteur (V)\\
-\end{tabular}
- 
+\end{tabular}} 
  Hypothèses :
 \begin{itemize}
 \item L’ensemble de mise sous pression {tube + distributeur + multiplicateur de pression} est défini par les transmittances suivantes : $H_{\text{pre}} (p)=\dfrac{K_m}{1+T_1 p}$	et	$H_{\text{fui}} (p)=\dfrac{K_f}{1+T_1 p}$ avec 	$K_m = 3,24$ ; 	$K_f = \SI{2,55e10}{Pa.m^{-3}.s}$ ; 	$T_1  = \SI{10}{s}$.
@@ -197,6 +197,8 @@ determiner $K_P$ tel que $\indice{\xi}{BF}=1$.
 
 \ifprof
 \else
+\ifcolle
+\else
 \begin{solution}
 \begin{enumerate}
   \item $\varepsilon_{\text{con \%}} = \dfrac{1}{1+K_PK_m K_{\text{pom}} K_{\text{cap}} }$;
@@ -206,7 +208,7 @@ determiner $K_P$ tel que $\indice{\xi}{BF}=1$.
   \item $K_P < 0,125$. Il est impossible de vérifier les trois conditions avec un correcteur proportionnel.
 \end{enumerate}
 \end{solution}
-
+\fi
 \marginnote{Corrigé voir \ref{PERF:06:C2:03:prec:63}.}
 
 \fi
