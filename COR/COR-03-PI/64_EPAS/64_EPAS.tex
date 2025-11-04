@@ -1,5 +1,5 @@
 \normaltrue \difficilefalse \tdifficilefalse
-\correctiontrue
+\correctionfalse
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{11}
 
@@ -11,7 +11,6 @@
 \index{Stabilite}
 
 \ifcorrection
-\marginnote{\textbf{Corrigé à valider.}}
 \else
 \marginnote{\textbf{Pas de corrigé pour cet exercice.}}
 \fi
@@ -116,41 +115,41 @@ On donne le diagramme de la FTBO retardée.
 
 
 \question{Déterminer le gain $K_c$ qui donne une marge de phase de 50\degres.}
-
 \ifprof
+
 Lorsque la phase vaut $-130\degres$, la gain vaut $-\SI{4}{dB}$. Il faut donc augmenter le gain de 4 dB soit $K_C = 10^{4/20} \simeq 1,6$. 
-%
-%\begin{figure}[!h]
-% \begin{tikzpicture}[xscale=2]
-%\tikzset{
-%semilog lines/.style={thin, bleuxp}, 
-%semilog lines 2/.style={semilog lines,bleuxpc},
-%semilog half lines/.style={semilog lines 2,dotted },
-%semilog label x/.style={semilog lines,below,font=\tiny,black},
-%semilog label y/.style={semilog lines,right,font=\tiny,black}
-%}
-%\begin{scope}[yscale=1/60]
-%\OrdBode{20}
-%\semilog{-1}{2}{-80}{40}
-%
-%\BodeAmp[bleuxp,thick]{-1:2}{\POAmpAsymp{1}{3.6}+\IntAmp{4}}
-%\BodeAmp[orangexp,ultra thick]{-1:2}{\POAmp{1}{3.6}+\IntAmp{4}}
-%%\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
-%%\draw (-3.5,120) node {\footnotesize $-$20 dB/d\'ecade};
-%%\draw (-1.5,65) node {\footnotesize $-$40 dB/d\'ecade};
-%%\draw [dashed,ultra thick,bleuxp] (-2.47,-1) -- (-2.47,80);
-%%\draw (-2.47,-1)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{300}$};
-%\end{scope}
-%\begin{scope}[yshift=-2cm,yscale=1/150]
-%\UniteDegre
-%\OrdBode{45}
-%\semilog{-1}{2}{-270}{0}
-%%\BodeArg[orangexp,samples=200,thick]{-1:1}{\POArgAsymp{40.}{300.}+\IntArg{1}}
-%\BodeArg[bleuxp,thick]{-1:2}{\POArgAsymp{4}{3.6}+\IntArg{1}}
-%\BodeArg[orangexp,ultra thick]{-1:2}{\POArg{4}{3.6}+\IntArg{1}+\RetArg{.2}}
-%\end{scope}
-%\end{tikzpicture}
-%\end{figure}
+
+\begin{figure}[!h]
+ \begin{tikzpicture}[xscale=2]
+\tikzset{
+semilog lines/.style={thin, bleuxp}, 
+semilog lines 2/.style={semilog lines,bleuxpc},
+semilog half lines/.style={semilog lines 2,dotted },
+semilog label x/.style={semilog lines,below,font=\tiny,black},
+semilog label y/.style={semilog lines,right,font=\tiny,black}
+}
+\begin{scope}[yscale=1/60]
+\OrdBode{20}
+\semilog{-1}{2}{-80}{40}
+
+\BodeAmp[bleuxp,thick]{-1:2}{\POAmpAsymp{1}{3.6}+\IntAmp{4}}
+\BodeAmp[orangexp,ultra thick]{-1:2}{\POAmp{1}{3.6}+\IntAmp{4}}
+%\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
+%\draw (-3.5,120) node {\footnotesize $-$20 dB/d\'ecade};
+%\draw (-1.5,65) node {\footnotesize $-$40 dB/d\'ecade};
+%\draw [dashed,ultra thick,bleuxp] (-2.47,-1) -- (-2.47,80);
+%\draw (-2.47,-1)  node {\Huge $\cdot$} node [above right]{\footnotesize $\dfrac{1}{300}$};
+\end{scope}
+\begin{scope}[yshift=-2cm,yscale=1/150]
+\UniteDegre
+\OrdBode{45}
+\semilog{-1}{2}{-270}{0}
+%\BodeArg[orangexp,samples=200,thick]{-1:1}{\POArgAsymp{40.}{300.}+\IntArg{1}}
+\BodeArg[bleuxp,thick]{-1:2}{\POArgAsymp{4}{3.6}+\IntArg{1}}
+\BodeArg[orangexp,ultra thick]{-1:2}{\POArg{4}{3.6}+\IntArg{1}+\RetArg{.2}}
+\end{scope}
+\end{tikzpicture}
+\end{figure}
 
 
 \else 
@@ -165,7 +164,6 @@ Le gain est nul pour une pulsation de $\SI{1,5}{rad/s}$ On veut que $T_c$ n'affe
 
 \question{Quelle est l’erreur de traînage du système corrigé pour l’entrée en rampe considérée (en négligeant le retard).}
 \ifprof
-La BO est de classe 1, l'erreur de trainage est $\varepsilon_t = {T_c}{4K_c}$.
 \else 
 \fi
 

@@ -42,28 +42,31 @@ On donne la poutre suivante.
 %
 %L'équation de la déformée est donnée par : $EI_{GZ}y''(x)=M_{fz}(x)$.
 %
-%\textbf{Calcul du torseur de cohésion}
-%
-%La poutre est composée de 2 tronçons :
-%\begin{itemize}
-%\item 1\ier tronçon : $\lambda\in[0,L]$
-%\item 2\ieme tronçon : $\lambda\in[L,2L]$
-%\end{itemize}
-%
-%\textbf{1\ier tronçon}
-%\begin{itemize}
-%\item On isole la partie II.
-%\item BAME : 
-%\begin{itemize}
-%\item $\torseurstat{T}{I}{II}$
-%\item $\torseurstat{T}{F}{II}$
-%\end{itemize}
-%\item D'après le PFS, on a donc $\torseurstat{T}{I}{II} + \torseurstat{T}{F}{II} = \{0\}$ et donc 
-%$\torseurstat{T}{II}{I} =  \torseurstat{T}{F}{II}$.
-%\end{itemize}
-%On a donc $\forall \lambda\in[0,L]$, $\vectm{G}{F}{II}=  \left(L-\lambda\right)\vect{x} \wedge - F\vect{y} =-F\left(L-\lambda\right) \vect{z} $. 
-%
-%Au final, $\torseurstat{T}{II}{I} = \torseurl{-F\vect{y}}{-F\left(L-\lambda\right) \vect{z}}{G}$.
+\textbf{Calcul du torseur de cohésion}
+
+La poutre est composée de 2 tronçons :
+\begin{itemize}
+\item 1\ier tronçon : $\lambda\in[0,L]$
+\item 2\ieme tronçon : $\lambda\in[L,2L]$
+\end{itemize}
+
+\textbf{1\ier tronçon}
+\begin{itemize}
+\item On isole la partie II.
+\item BAME : 
+\begin{itemize}
+\item $\torseurstat{T}{I}{II}$
+\item $\torseurstat{T}{p}{II}$
+\end{itemize}
+\item D'après le PFS, on a donc $\torseurstat{T}{I}{II} + \torseurstat{T}{p}{II} = \{0\}$ et donc 
+$\torseurstat{T}{II}{I} =  \torseurstat{T}{p}{II}$.
+\end{itemize}
+On a donc $\forall \lambda\in[0,L]$, $\vectm{G}{F}{II}=  \left(3L/2-\lambda\right)\vect{x} \wedge - pL\vect{y} =- pL \left(\dfrac{3L}{2}-\lambda\right) \vect{z} $. 
+
+Au final, $\torseurstat{T}{II}{I} = \torseurl{-pL\vect{y}}{- pL \left(\dfrac{3L}{2}-\lambda\right) \vect{z}}{G}$.
+
+
+A SUIVRE...
 %
 %\textbf{2\ieme tronçon}
 %
@@ -101,7 +104,7 @@ On donne la poutre suivante.
 
 \fi
 
-\question{Donner la valeur de la flèche au point d'application de l'effort.}
+\question{Donner la valeur de la flèche maximale.}
 \ifprof
 \else
 \fi
