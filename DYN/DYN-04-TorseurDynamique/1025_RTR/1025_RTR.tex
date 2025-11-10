@@ -4,7 +4,7 @@
 %\UPSTIidClasse{11} % 11 sup, 12 spé
 %\newcommand{\UPSTIidClasse}{12}
 
-\exer{Mouvement RR  $\star$ \label{DYN:04:1025}}
+\exer{Mouvement RTR  $\star$ \label{DYN:04:1025}}
 \setcounter{question}{0}\marginnote{\xpComp{DYN}{04}}%\xpComp{CIN}{02}%\UPSTIcompetence[2]{C2-05}
 
 
@@ -33,7 +33,26 @@ On a :
 \fi
 
 \question{Déterminer $\vectrd{2}{0}\cdot\vect{i_1}$.}
-\ifprof~\\
+\ifprof
+
+\textbf{Calculons $\vectrd{2}{0}$}
+
+$\vectrd{2}{0} = m_2\vectg{G_2}{2}{0}=m_2 \vectg{D}{2}{0} $
+
+ \textbf{Calcul de $\vectv{D}{2}{0}$ : }  
+$\vectv{D}{2}{0}=\deriv{\vect{AD}}{\rep{0}}$ 
+$=\deriv{ R\vi{1} + \lambda (t) \vi{1}}{\rep{0}}$  
+$= \left( R + \lambda (t)\right) \thetap \vj{1} + \lambdap (t) \vi{1}$.
+
+
+ \textbf{Calcul de $\vectg{D}{2}{0}$ : }  
+$\vectg{D}{2}{0}=\deriv{\vectv{D}{2}{0}}{\rep{0}}$ 
+$=\deriv{  \left( R + \lambda (t)\right) \thetap \vj{1} + \lambdap (t) \vi{1}}{\rep{0}}$  
+$= \left(\lambdap (t)\right) \thetap \vj{1} +\left( R + \lambda (t)\right) \thetapp \vj{1} - \left( R + \lambda (t)\right) \thetap^2 \vi{1} + \lambdap (t) \vi{1}$
+%$=  R\thetapp \vj{1}-R\thetap^2 \vi{1}$.
+%
+%Au final, $\vectrd{1}{0}= m_1\left(R\thetapp \vj{1}-R\thetap^2 \vi{1}\right)$.
+%\vspace{.5cm}
 \else
 \fi
 
