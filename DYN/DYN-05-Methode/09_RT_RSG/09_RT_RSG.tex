@@ -5,7 +5,7 @@
 
 \exer{Mouvement RT -- RSG  $\star\star$ \label{C1:05:09}}
 \setcounter{question}{0}\marginnote{\xpComp{DYN}{05}}%\UPSTIcompetence{B2-14}
-\UPSTIcompetence[2]{C1-05}
+%\UPSTIcompetence[2]{C1-05}
 \index{Compétence B2-14}
 \index{Compétence C1-05}
 \index{Principe fondamental de la dynamique}
@@ -92,7 +92,31 @@ On en déduit la stratégie suivante :
 \ifcolle
 Les matrice d'inertie sont diagonales au centre d'inertie des solides.
 \question{Déterminer les lois de mouvement.}
+\ifprof
+On montre que :
+\begin{itemize}
+\item $\vectv{B}{2}{0} = \lambdap\vi{1} + \thetap\left(\lambda(t)\vj{1}-R\vi{0} \right)$
+\item $\vectg{B}{2}{0}  = \lambdapp(t)\vi{1} %+\lambdap(t)\thetap\vj{1} 
++ \thetapp(t)\left(\lambda(t)\vj{1}-R\vi{0} \right)
++ \thetap(t)\left(2\lambdap(t)\vj{1}-\lambda(t)\thetap\vi{1} \right)
+$
+\item $\vectrd{2}{0} =  m_2 \left( \lambdapp(t)\vi{1} +\lambdap(t)\thetap\vj{1} 
++ \thetapp(t)\left(\lambda(t)\vj{1}-R\vi{0} \right)
++ \thetap(t)\left(\lambdap(t)\vj{1}-\lambda(t)\thetap\vi{1} \right)\right)$
+\item $\vectmd{I}{2}{0} \cdot \vect{k_0} =     
+-m_2 R\lambdapp(t)\cos\theta 
++m_2 R\lambdap(t)\thetap\sin\theta 
+ +m_2 R^2\thetapp(t) 
++ m_2 R\thetap(t)\lambdap(t)\sin\theta
++m_2 R\thetap^2(t)\lambda(t)\cos\theta 
++ 2 m_2  \lambda(t)  \lambdap(t)\thetap
++  m_2  \thetapp(t) \lambda(t)^2 +C_2\thetapp$
+\end{itemize}
 \else
+\fi
+\else
+
+
 \fi
 
 \ifprof
