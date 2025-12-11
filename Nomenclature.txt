@@ -166,5 +166,6 @@
 1023_MCC
 1024_ProdVect
 1025_RTR
+1026_pale
 
 1100_Pneumatique
