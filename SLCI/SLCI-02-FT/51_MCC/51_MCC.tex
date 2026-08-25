@@ -21,10 +21,8 @@
 \else
 On donne les équations du moteur à courant continu :
 \begin{itemize}
-\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$;
-\item $e(t)=K\omega(t)$;
-\item $c(t)=Ki(t)$;
-\item $c(t)- f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
+\item $u(t) = e(t)+ Ri(t) +L \dfrac{\text{d}i(t)}{\text{d} t}$ et $e(t)=K\omega(t)$;
+\item $c(t)=Ki(t)$ et $c(t)- f\omega(t)=J\dfrac{\text{d}\omega(t)}{\text{d} t}$.
 \end{itemize}
 \fi
 
@@ -164,7 +162,8 @@ Enfin, $\xi$ est sans unité... à vérifier :)
 
 \ifcolle
 \else
-\marginnote{\begin{corrige}
+%\marginnote[-7cm]{
+\begin{corrige}
 \begin{enumerate}
     \item $H(p)=\dfrac{K_m}{K_m^2 +\left(R +Lp\right) \left( Jp +f \right)} $.
     \item Ordre 2, classe 0.
@@ -173,7 +172,8 @@ Enfin, $\xi$ est sans unité... à vérifier :)
 $\omega_0=\sqrt{\dfrac{K_m^2+ Rf}{LJ}}$,
 $\xi = \dfrac{RJ  + Lf}{2\sqrt{{LJ\left(K_m^2+ Rf\right)}}}$.
 \end{enumerate}
-\end{corrige}}
+\end{corrige}
+%}
 
 \fi
 \marginnote{Corrigé voir \ref{B2:04:51}.}

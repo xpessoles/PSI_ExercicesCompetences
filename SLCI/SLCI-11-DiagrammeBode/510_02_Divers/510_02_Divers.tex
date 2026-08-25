@@ -42,10 +42,10 @@ semilog label x/.style={semilog lines,below,font=\tiny,black},
 semilog label y/.style={semilog lines,right,font=\tiny,black}
 }
 \begin{scope}[yscale=1/40]
-\semilog{-3}{3}{-140}{20}
+\semilog{-3}{3}{-140}{10}
 \UnitedB
 \OrdBode{20}
-\BodeAmp[orangexp,thin,samples=100]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{10}}
+\BodeAmp[orangexp,thin,samples=300]{-3:3}{\POAmpAsymp{1}{10} + \POAmpAsymp{1}{0.1}}
 \BodeAmp[orangexp,ultra thick]{-3:3}{\POAmp{1}{10} + \POAmp{1}{0.1}}
 
 %\draw (-2.2,27) node {\footnotesize 23,5 dB, 0 dB/d\'ecade};
@@ -99,6 +99,8 @@ semilog label y/.style={semilog lines,right,font=\tiny,black}
 
 
 \question{Le système est sollicité par une entrée sinusoïdale de période \SI{60}{s} et d'amplitude 10. Quel est le signal de sortie ?}
+
+
 \ifprof
 Pour une période de \SI{60}{s}, la pulsation est de $\dfrac{2\pi}{T}$ soit $\omega = \SI{0,1}{rad.s^{-1}}$.
 Pour cette pulsation le gain est de \SI{-5}{dB} et le déphasage de $-\dfrac{\pi}{4}$.

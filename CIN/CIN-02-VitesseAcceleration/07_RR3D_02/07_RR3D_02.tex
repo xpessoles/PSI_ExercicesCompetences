@@ -28,20 +28,7 @@ Soit le mécanisme suivant. On a $\vect{AB}=R\vect{i_1}$ et $\vect{BC}=\ell\vect
 %=====================================
 \ifprof
 \else
-\ifcolle
-\else
-\marginnote{
-\begin{solution}
-\begin{enumerate}
-\item $\vectv{C}{2}{0}= \left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\cos\varphi \vi{1} + r\dot{\varphi}\vk{2}$.
-\item  $\vectv{C}{2}{0}=r\dot{\varphi}\vk{2}-r\dot{\theta}\cos\varphi\vi{1}+\ell\dot{\theta}\vj{1}+R\dot{\theta}\vj{1}$.
-\item $\torseurcin{V}{2}{0} = \torseurl{\dot{\theta}\vk{1}+ \dot{\varphi}\vi{1}}{\left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\cos\varphi \vi{1} + r\dot{\varphi}\vk{2}}{C}$.
-\item $\vectg{C}{2}{0} =\left(R+\ell\right)\ddot{\theta}\vj{1} -\left(R+\ell\right)\dot{\theta}^2\vi{1} 
--r\ddot{\theta}\cos\varphi \vi{1} +r\dot{\theta}\dot{\varphi}\sin\varphi \vi{1} -r\dot{\theta}^2\cos\varphi \vj{1} 
-+ r\ddot{\varphi}\vk{2}+ r\dot{\varphi}\left(\dot{\theta}\sin\varphi\vi{1}- \dot{\varphi}\vj{2} \right)$.
-\end{enumerate} 
-\end{solution}}
-\fi
+
 \marginnote{Corrigé voir \ref{CIN:02:B2:13:07}.}
 \fi
 %=====================================
@@ -122,5 +109,20 @@ $ =\left(R+\ell\right)\ddot{\theta}\vj{1} -\left(R+\ell\right)\dot{\theta}^2\vi{
 -r\ddot{\theta}\cos\varphi \vi{1} +r\dot{\theta}\dot{\varphi}\sin\varphi \vi{1} -r\dot{\theta}^2\cos\varphi \vj{1} 
 + r\ddot{\varphi}\vk{2}+ r\dot{\varphi}\left(\dot{\theta}\sin\varphi\vi{1}- \dot{\varphi}\vj{2} \right)$.
 \else
+\fi
+
+\ifcolle
+\else
+%\marginnote{
+\begin{solution}
+\begin{enumerate}
+\item $\vectv{C}{2}{0}= \left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\cos\varphi \vi{1} + r\dot{\varphi}\vk{2}$.
+\item  $\vectv{C}{2}{0}=r\dot{\varphi}\vk{2}-r\dot{\theta}\cos\varphi\vi{1}+\ell\dot{\theta}\vj{1}+R\dot{\theta}\vj{1}$.
+\item $\torseurcin{V}{2}{0} = \torseurl{\dot{\theta}\vk{1}+ \dot{\varphi}\vi{1}}{\left(R+\ell\right)\dot{\theta}\vj{1} -r\dot{\theta}\cos\varphi \vi{1} + r\dot{\varphi}\vk{2}}{C}$.
+\item $\vectg{C}{2}{0} =\left(R+\ell\right)\ddot{\theta}\vj{1} -\left(R+\ell\right)\dot{\theta}^2\vi{1} 
+-r\ddot{\theta}\cos\varphi \vi{1} +r\dot{\theta}\dot{\varphi}\sin\varphi \vi{1} -r\dot{\theta}^2\cos\varphi \vj{1} 
++ r\ddot{\varphi}\vk{2}+ r\dot{\varphi}\left(\dot{\theta}\sin\varphi\vi{1}- \dot{\varphi}\vj{2} \right)$.
+\end{enumerate} 
+\end{solution}%}
 \fi
 
